@@ -66,6 +66,15 @@
             --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            
+            /* Animações */
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+            --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --duration-fast: 0.15s;
+            --duration-base: 0.3s;
+            --duration-slow: 0.5s;
+            --duration-stagger: 0.06s;
         }
 
         body.tema-claro {
@@ -86,6 +95,506 @@
             --thead-bg: rgba(248, 250, 253, 0.98);
             --shadow: rgba(30, 45, 80, 0.14);
             --shadow-colored: rgba(233, 69, 96, 0.1);
+        }
+
+        /* ========== TEMA AZUL OCEANO ========== */
+        body.tema-oceano {
+            --bg-page: #0a192f;
+            --bg-panel: rgba(17, 34, 64, 0.7);
+            --bg-panel-solid: #112240;
+            --bg-header: rgba(10, 25, 47, 0.8);
+            --bg-input: #0a192f;
+            --bg-chart: rgba(10, 25, 47, 0.7);
+            --bg-row-even: rgba(100, 255, 218, 0.02);
+            --border: #1d3a5c;
+            --border-glass: rgba(29, 58, 92, 0.7);
+            --text: #ccd6f6;
+            --text-muted: #8892b0;
+            --text-dim: #495670;
+            --thead-bg: rgba(17, 34, 64, 0.97);
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        body.tema-oceano h1,
+        body.tema-oceano .form-area h2,
+        body.tema-oceano .tabela-header h2,
+        body.tema-oceano .graficos-area h2,
+        body.tema-oceano .gamificacao-area h2,
+        body.tema-oceano .chat-ia-area h2,
+        body.tema-oceano .ia-area h2,
+        body.tema-oceano .categorias-gerenciar h2 { color: #64ffda; }
+
+        body.tema-oceano .btn-add { background: #64ffda; color: #0a192f; }
+        body.tema-oceano .btn-add:hover { background: #4cd6b0; }
+
+        body.tema-oceano .card.saldo {
+            background: linear-gradient(135deg, rgba(100, 255, 218, 0.15), rgba(100, 255, 218, 0.05));
+            border-color: rgba(100, 255, 218, 0.4);
+            box-shadow: 0 0 30px rgba(100, 255, 218, 0.15);
+        }
+
+        body.tema-oceano .mes-atual { color: #64ffda; }
+        body.tema-oceano .tipo-badge.entrada { background: rgba(100, 255, 218, 0.15); color: #64ffda; }
+        body.tema-oceano .valor-cell.entrada { color: #64ffda; }
+        body.tema-oceano .card.entrada .valor { color: #64ffda; }
+        body.tema-oceano .btn-nav:hover,
+        body.tema-oceano .btn-hoje:hover { background: #64ffda; border-color: #64ffda; color: #0a192f; }
+        body.tema-oceano .mini-card.verde .valor-mini { color: #64ffda; }
+
+        body.tema-oceano {
+            background:
+                radial-gradient(1200px 600px at 90% -10%, rgba(100, 255, 218, 0.08), transparent 60%),
+                radial-gradient(1000px 500px at -10% 110%, rgba(100, 255, 218, 0.06), transparent 60%);
+            background-color: var(--bg-page);
+            background-attachment: fixed;
+        }
+
+        /* ========== TEMA FLORESTA ========== */
+        body.tema-floresta {
+            --bg-page: #1a2e1a;
+            --bg-panel: rgba(26, 46, 26, 0.7);
+            --bg-panel-solid: #1e3320;
+            --bg-header: rgba(26, 46, 26, 0.8);
+            --bg-input: #1a2e1a;
+            --bg-chart: rgba(26, 46, 26, 0.7);
+            --bg-row-even: rgba(76, 175, 80, 0.03);
+            --border: #2d5a2d;
+            --border-glass: rgba(45, 90, 45, 0.7);
+            --text: #e8f5e9;
+            --text-muted: #a5d6a7;
+            --text-dim: #5a8a5a;
+            --thead-bg: rgba(30, 51, 32, 0.97);
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        body.tema-floresta h1,
+        body.tema-floresta .form-area h2,
+        body.tema-floresta .tabela-header h2,
+        body.tema-floresta .graficos-area h2,
+        body.tema-floresta .gamificacao-area h2,
+        body.tema-floresta .chat-ia-area h2,
+        body.tema-floresta .ia-area h2,
+        body.tema-floresta .categorias-gerenciar h2 { color: #66bb6a; }
+
+        body.tema-floresta .btn-add { background: #66bb6a; color: #1a2e1a; }
+        body.tema-floresta .btn-add:hover { background: #4caf50; }
+
+        body.tema-floresta .card.saldo {
+            background: linear-gradient(135deg, rgba(102, 187, 106, 0.15), rgba(102, 187, 106, 0.05));
+            border-color: rgba(102, 187, 106, 0.4);
+            box-shadow: 0 0 30px rgba(102, 187, 106, 0.15);
+        }
+
+        body.tema-floresta .mes-atual { color: #66bb6a; }
+        body.tema-floresta .tipo-badge.entrada { background: rgba(102, 187, 106, 0.15); color: #66bb6a; }
+        body.tema-floresta .valor-cell.entrada { color: #66bb6a; }
+        body.tema-floresta .card.entrada .valor { color: #66bb6a; }
+        body.tema-floresta .btn-nav:hover,
+        body.tema-floresta .btn-hoje:hover { background: #66bb6a; border-color: #66bb6a; color: #1a2e1a; }
+        body.tema-floresta .mini-card.verde .valor-mini { color: #66bb6a; }
+
+        body.tema-floresta {
+            background:
+                radial-gradient(1200px 600px at 90% -10%, rgba(102, 187, 106, 0.08), transparent 60%),
+                radial-gradient(1000px 500px at -10% 110%, rgba(76, 175, 80, 0.06), transparent 60%);
+            background-color: var(--bg-page);
+            background-attachment: fixed;
+        }
+
+        /* ========== TEMA ROXO COSMIC ========== */
+        body.tema-cosmic {
+            --bg-page: #1a1030;
+            --bg-panel: rgba(30, 20, 55, 0.7);
+            --bg-panel-solid: #1e1437;
+            --bg-header: rgba(26, 16, 48, 0.8);
+            --bg-input: #1a1030;
+            --bg-chart: rgba(26, 16, 48, 0.7);
+            --bg-row-even: rgba(186, 104, 255, 0.03);
+            --border: #3d2a6e;
+            --border-glass: rgba(61, 42, 110, 0.7);
+            --text: #e8d5f5;
+            --text-muted: #b39ddb;
+            --text-dim: #6a4d9a;
+            --thead-bg: rgba(30, 20, 55, 0.97);
+            --shadow: rgba(0, 0, 0, 0.35);
+        }
+
+        body.tema-cosmic h1,
+        body.tema-cosmic .form-area h2,
+        body.tema-cosmic .tabela-header h2,
+        body.tema-cosmic .graficos-area h2,
+        body.tema-cosmic .gamificacao-area h2,
+        body.tema-cosmic .chat-ia-area h2,
+        body.tema-cosmic .ia-area h2,
+        body.tema-cosmic .categorias-gerenciar h2 { color: #ba68ff; }
+
+        body.tema-cosmic .btn-add { background: #ba68ff; color: #fff; }
+        body.tema-cosmic .btn-add:hover { background: #9c4dcc; }
+
+        body.tema-cosmic .card.saldo {
+            background: linear-gradient(135deg, rgba(186, 104, 255, 0.15), rgba(186, 104, 255, 0.05));
+            border-color: rgba(186, 104, 255, 0.4);
+            box-shadow: 0 0 30px rgba(186, 104, 255, 0.15);
+        }
+
+        body.tema-cosmic .mes-atual { color: #ba68ff; }
+        body.tema-cosmic .tipo-badge.entrada { background: rgba(186, 104, 255, 0.15); color: #ba68ff; }
+        body.tema-cosmic .valor-cell.entrada { color: #ba68ff; }
+        body.tema-cosmic .card.entrada .valor { color: #ba68ff; }
+        body.tema-cosmic .btn-nav:hover,
+        body.tema-cosmic .btn-hoje:hover { background: #ba68ff; border-color: #ba68ff; color: #fff; }
+        body.tema-cosmic .mini-card.verde .valor-mini { color: #ba68ff; }
+
+        body.tema-cosmic {
+            background:
+                radial-gradient(1200px 600px at 90% -10%, rgba(186, 104, 255, 0.1), transparent 60%),
+                radial-gradient(1000px 500px at -10% 110%, rgba(156, 77, 204, 0.08), transparent 60%);
+            background-color: var(--bg-page);
+            background-attachment: fixed;
+        }
+
+        /* ========== TEMA ÂMBAR / DOURADO ========== */
+        body.tema-ambar {
+            --bg-page: #1a1508;
+            --bg-panel: rgba(30, 25, 12, 0.7);
+            --bg-panel-solid: #1e190c;
+            --bg-header: rgba(26, 21, 8, 0.8);
+            --bg-input: #1a1508;
+            --bg-chart: rgba(26, 21, 8, 0.7);
+            --bg-row-even: rgba(255, 193, 7, 0.03);
+            --border: #4a3d10;
+            --border-glass: rgba(74, 61, 16, 0.7);
+            --text: #fff8e1;
+            --text-muted: #ffe082;
+            --text-dim: #8a7530;
+            --thead-bg: rgba(30, 25, 12, 0.97);
+            --shadow: rgba(0, 0, 0, 0.35);
+        }
+
+        body.tema-ambar h1,
+        body.tema-ambar .form-area h2,
+        body.tema-ambar .tabela-header h2,
+        body.tema-ambar .graficos-area h2,
+        body.tema-ambar .gamificacao-area h2,
+        body.tema-ambar .chat-ia-area h2,
+        body.tema-ambar .ia-area h2,
+        body.tema-ambar .categorias-gerenciar h2 { color: #ffc107; }
+
+        body.tema-ambar .btn-add { background: #ffc107; color: #1a1508; }
+        body.tema-ambar .btn-add:hover { background: #ffb300; }
+
+        body.tema-ambar .card.saldo {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 193, 7, 0.05));
+            border-color: rgba(255, 193, 7, 0.4);
+            box-shadow: 0 0 30px rgba(255, 193, 7, 0.15);
+        }
+
+        body.tema-ambar .mes-atual { color: #ffc107; }
+        body.tema-ambar .tipo-badge.entrada { background: rgba(255, 193, 7, 0.15); color: #ffc107; }
+        body.tema-ambar .valor-cell.entrada { color: #ffc107; }
+        body.tema-ambar .card.entrada .valor { color: #ffc107; }
+        body.tema-ambar .btn-nav:hover,
+        body.tema-ambar .btn-hoje:hover { background: #ffc107; border-color: #ffc107; color: #1a1508; }
+        body.tema-ambar .mini-card.verde .valor-mini { color: #ffc107; }
+
+        body.tema-ambar {
+            background:
+                radial-gradient(1200px 600px at 90% -10%, rgba(255, 193, 7, 0.08), transparent 60%),
+                radial-gradient(1000px 500px at -10% 110%, rgba(255, 179, 0, 0.06), transparent 60%);
+            background-color: var(--bg-page);
+            background-attachment: fixed;
+        }
+
+        /* ========== TEMA MINIMALISTA CLARO ========== */
+        body.tema-minimal {
+            --bg-page: #fafafa;
+            --bg-panel: rgba(255, 255, 255, 0.95);
+            --bg-panel-solid: #ffffff;
+            --bg-header: rgba(250, 250, 250, 0.95);
+            --bg-input: #f5f5f5;
+            --bg-chart: rgba(245, 245, 245, 0.95);
+            --bg-row-even: rgba(0, 0, 0, 0.02);
+            --border: #e0e0e0;
+            --border-glass: rgba(200, 200, 200, 0.5);
+            --text: #212121;
+            --text-muted: #757575;
+            --text-dim: #bdbdbd;
+            --thead-bg: rgba(250, 250, 250, 0.98);
+            --shadow: rgba(0, 0, 0, 0.06);
+        }
+
+        body.tema-minimal h1,
+        body.tema-minimal .form-area h2,
+        body.tema-minimal .tabela-header h2,
+        body.tema-minimal .graficos-area h2,
+        body.tema-minimal .gamificacao-area h2,
+        body.tema-minimal .chat-ia-area h2,
+        body.tema-minimal .ia-area h2,
+        body.tema-minimal .categorias-gerenciar h2 { color: #424242; }
+
+        body.tema-minimal .btn-add { background: #424242; color: #fff; }
+        body.tema-minimal .btn-add:hover { background: #212121; }
+
+        body.tema-minimal .card {
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        body.tema-minimal .card.saldo {
+            background: linear-gradient(135deg, #f5f5f5, #eeeeee);
+            border-color: #e0e0e0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        body.tema-minimal .card.saldo .valor { color: #424242; }
+        body.tema-minimal .mes-atual { color: #424242; }
+        body.tema-minimal .btn-nav:hover,
+        body.tema-minimal .btn-hoje:hover { background: #424242; border-color: #424242; color: #fff; }
+
+        body.tema-minimal {
+            background: #fafafa;
+            background-attachment: fixed;
+        }
+
+        /* ========== TEMA NEON CYBERPUNK ========== */
+        body.tema-neon {
+            --bg-page: #0d0221;
+            --bg-panel: rgba(13, 2, 33, 0.8);
+            --bg-panel-solid: #150535;
+            --bg-header: rgba(13, 2, 33, 0.9);
+            --bg-input: #0d0221;
+            --bg-chart: rgba(13, 2, 33, 0.7);
+            --bg-row-even: rgba(255, 0, 255, 0.03);
+            --border: #2a0845;
+            --border-glass: rgba(42, 8, 69, 0.7);
+            --text: #f0e6ff;
+            --text-muted: #b388ff;
+            --text-dim: #6a3d9a;
+            --thead-bg: rgba(21, 5, 53, 0.97);
+            --shadow: rgba(255, 0, 255, 0.15);
+        }
+        body.tema-neon{--bg-page:#0d0221;--bg-panel:rgba(13,2,33,0.8);--bg-panel-solid:#150535;--bg-header:rgba(13,2,33,0.9);--bg-input:#0d0221;--bg-chart:rgba(13,2,33,0.7);--bg-row-even:rgba(255,0,255,0.03);--border:#2a0845;--border-glass:rgba(42,8,69,0.7);--text:#f0e6ff;--text-muted:#b388ff;--text-dim:#6a3d9a;--thead-bg:rgba(21,5,53,0.97);--shadow:rgba(255,0,255,0.15)}body.tema-neon h1,body.tema-neon .form-area h2,body.tema-neon .tabela-header h2,body.tema-neon .graficos-area h2,body.tema-neon .gamificacao-area h2,body.tema-neon .chat-ia-area h2,body.tema-neon .ia-area h2,body.tema-neon .categorias-gerenciar h2{color:#ff00ff;text-shadow:0 0 10px rgba(255,0,255,0.5),0 0 20px rgba(255,0,255,0.2)}
+body.tema-neon h1, body.tema-neon .form-area h2, body.tema-neon .tabela-header h2, body.tema-neon .graficos-area h2, body.tema-neon .gamificacao-area h2, body.tema-neon .chat-ia-area h2, body.tema-neon .ia-area h2, body.tema-neon .categorias-gerenciar h2 { color: #ff00ff; text-shadow: 0 0 10px rgba(255,0,255,0.5), 0 0 20px rgba(255,0,255,0.2); }
+        body.tema-neon .btn-add { background: linear-gradient(135deg, #ff00ff, #00ffff); color: #0d0221; box-shadow: 0 0 15px rgba(255,0,255,0.4); }
+        body.tema-neon .btn-add:hover { box-shadow: 0 0 25px rgba(255,0,255,0.6), 0 0 50px rgba(0,255,255,0.3); }
+        body.tema-neon .card.saldo { background: linear-gradient(135deg, rgba(255,0,255,0.15), rgba(0,255,255,0.1)); border-color: rgba(255,0,255,0.5); box-shadow: 0 0 30px rgba(255,0,255,0.2); }
+        body.tema-neon .mes-atual { color: #00ffff; text-shadow: 0 0 10px rgba(0,255,255,0.5); }
+        body.tema-neon .tipo-badge.entrada { background: rgba(0,255,255,0.15); color: #00ffff; }
+        body.tema-neon .valor-cell.entrada, body.tema-neon .card.entrada .valor { color: #00ffff; text-shadow: 0 0 6px rgba(0,255,255,0.3); }
+        body.tema-neon .card.saida .valor { color: #ff0066; text-shadow: 0 0 8px rgba(255,0,102,0.3); }
+        body.tema-neon .btn-nav:hover, body.tema-neon .btn-hoje:hover { background: #ff00ff; border-color: #ff00ff; color: #fff; box-shadow: 0 0 15px rgba(255,0,255,0.5); }
+        body.tema-neon .mini-card.verde .valor-mini { color: #00ffff; }
+        body.tema-neon .mini-card.vermelho .valor-mini { color: #ff0066; }
+        body.tema-neon .mini-card.azul .valor-mini { color: #ff00ff; }
+        body.tema-neon .card { border-color: rgba(255,0,255,0.2); box-shadow: 0 0 15px rgba(255,0,255,0.08); }
+        body.tema-neon tbody tr:hover { background: rgba(255,0,255,0.08); }
+        body.tema-neon .logo svg { filter: drop-shadow(0 0 12px rgba(255,0,255,0.6)); }
+        body.tema-neon { background: radial-gradient(800px 400px at 80% -10%, rgba(255,0,255,0.12), transparent 60%), radial-gradient(600px 300px at 10% 110%, rgba(0,255,255,0.1), transparent 60%); background-color: var(--bg-page); background-attachment: fixed; }
+
+        /* ========== TEMA MATRIX ========== */
+        body.tema-matrix {
+    --bg-page: #000a00;
+    --bg-panel: rgba(0, 10, 0, 0.85);
+    --bg-panel-solid: #001200;
+    --bg-header: rgba(0, 10, 0, 0.92);
+    --bg-input: #000a00;
+    --bg-chart: rgba(0, 10, 0, 0.7);
+    --bg-row-even: rgba(0, 255, 65, 0.02);
+    --border: #003300;
+    --border-glass: rgba(0, 51, 0, 0.7);
+    --text: #ccffcc;
+    --text-muted: #66cc66;
+    --text-dim: #336633;
+    --thead-bg: rgba(0, 18, 0, 0.97);
+    --shadow: rgba(0, 255, 65, 0.1);
+}
+body.tema-matrix{--bg-page:#000a00;--bg-panel:rgba(0,10,0,0.85);--bg-panel-solid:#001200;--bg-header:rgba(0,10,0,0.92);--bg-input:#000a00;--bg-chart:rgba(0,10,0,0.7);--bg-row-even:rgba(0,255,65,0.02);--border:#003300;--border-glass:rgba(0,51,0,0.7);--text:#ccffcc;--text-muted:#66cc66;--text-dim:#336633;--thead-bg:rgba(0,18,0,0.97);--shadow:rgba(0,255,65,0.1)}
+body.tema-matrix h1, body.tema-matrix .form-area h2, body.tema-matrix .tabela-header h2, body.tema-matrix .graficos-area h2, body.tema-matrix .gamificacao-area h2, body.tema-matrix .chat-ia-area h2, body.tema-matrix .ia-area h2, body.tema-matrix .categorias-gerenciar h2 { color: #00ff41; text-shadow: 0 0 8px rgba(0,255,65,0.6), 0 0 16px rgba(0,255,65,0.2); font-family: 'Courier New', monospace; }
+body.tema-matrix .btn-add { background: #00ff41; color: #000a00; box-shadow: 0 0 12px rgba(0,255,65,0.4); }
+body.tema-matrix .btn-add:hover { box-shadow: 0 0 25px rgba(0,255,65,0.7); }
+body.tema-matrix .card.saldo { background: linear-gradient(135deg, rgba(0,255,65,0.1), rgba(0,255,65,0.03)); border-color: rgba(0,255,65,0.4); box-shadow: 0 0 25px rgba(0,255,65,0.15); }
+body.tema-matrix .mes-atual { color: #00ff41; text-shadow: 0 0 10px rgba(0,255,65,0.5); font-family: 'Courier New', monospace; }
+body.tema-matrix .tipo-badge.entrada { background: rgba(0,255,65,0.15); color: #00ff41; }
+body.tema-matrix .valor-cell.entrada, body.tema-matrix .card.entrada .valor { color: #00ff41; text-shadow: 0 0 4px rgba(0,255,65,0.3); }
+body.tema-matrix .card.saida .valor { color: #ff3333; text-shadow: 0 0 6px rgba(255,51,51,0.3); }
+body.tema-matrix .btn-nav:hover, body.tema-matrix .btn-hoje:hover { background: #00ff41; border-color: #00ff41; color: #000a00; box-shadow: 0 0 12px rgba(0,255,65,0.5); }
+body.tema-matrix .mini-card.verde .valor-mini, body.tema-matrix .mini-card.azul .valor-mini { color: #00ff41; }
+body.tema-matrix .mini-card.vermelho .valor-mini { color: #ff3333; }
+body.tema-matrix .card { border-color: rgba(0,255,65,0.15); }
+body.tema-matrix tbody tr:hover { background: rgba(0,255,65,0.06); }
+body.tema-matrix .data-atual, body.tema-matrix td, body.tema-matrix th { font-family: 'Courier New', monospace; }
+body.tema-matrix .logo svg { filter: drop-shadow(0 0 10px rgba(0,255,65,0.6)); }
+body.tema-matrix { background: radial-gradient(600px 300px at 50% 0%, rgba(0,255,65,0.06), transparent 60%); background-color: var(--bg-page); background-attachment: fixed; }
+
+/* ========== TEMA ARCADE RETRO ========== */
+        body.tema-arcade {
+    --bg-page: #1a0a2e;
+    --bg-panel: rgba(26, 10, 46, 0.8);
+    --bg-panel-solid: #220e3a;
+    --bg-header: rgba(26, 10, 46, 0.9);
+    --bg-input: #1a0a2e;
+    --bg-chart: rgba(26, 10, 46, 0.7);
+    --bg-row-even: rgba(255, 204, 0, 0.03);
+    --border: #3d1a6e;
+    --border-glass: rgba(61, 26, 110, 0.7);
+    --text: #fff5cc;
+    --text-muted: #ffcc00;
+    --text-dim: #8a6d00;
+    --thead-bg: rgba(34, 14, 58, 0.97);
+    --shadow: rgba(255, 204, 0, 0.1);
+}
+body.tema-arcade{--bg-page:#1a0a2e;--bg-panel:rgba(26,10,46,0.8);--bg-panel-solid:#220e3a;--bg-header:rgba(26,10,46,0.9);--bg-input:#1a0a2e;--bg-chart:rgba(26,10,46,0.7);--bg-row-even:rgba(255,204,0,0.03);--border:#3d1a6e;--border-glass:rgba(61,26,110,0.7);--text:#fff5cc;--text-muted:#ffcc00;--text-dim:#8a6d00;--thead-bg:rgba(34,14,58,0.97);--shadow:rgba(255,204,0,0.1)}
+body.tema-arcade h1, body.tema-arcade .form-area h2, body.tema-arcade .tabela-header h2, body.tema-arcade .graficos-area h2, body.tema-arcade .gamificacao-area h2, body.tema-arcade .chat-ia-area h2, body.tema-arcade .ia-area h2, body.tema-arcade .categorias-gerenciar h2 { color: #ffcc00; text-shadow: 2px 2px 0 #ff6600, 4px 4px 0 rgba(255,102,0,0.3); font-family: 'Courier New', monospace; letter-spacing: 1px; }
+body.tema-arcade .btn-add { background: linear-gradient(180deg, #ffcc00, #ff8800); color: #1a0a2e; box-shadow: 0 4px 0 #cc6600, 0 0 12px rgba(255,204,0,0.3); }
+body.tema-arcade .btn-add:hover { box-shadow: 0 4px 0 #cc6600, 0 0 20px rgba(255,204,0,0.5); }
+body.tema-arcade .card.saldo { background: linear-gradient(135deg, rgba(255,204,0,0.12), rgba(255,102,0,0.08)); border-color: rgba(255,204,0,0.5); box-shadow: 0 0 20px rgba(255,204,0,0.15); }
+body.tema-arcade .mes-atual { color: #ff6600; text-shadow: 2px 2px 0 rgba(255,102,0,0.4); font-family: 'Courier New', monospace; }
+body.tema-arcade .tipo-badge.entrada { background: rgba(0,255,128,0.15); color: #00ff80; }
+body.tema-arcade .valor-cell.entrada, body.tema-arcade .card.entrada .valor { color: #00ff80; text-shadow: 0 0 6px rgba(0,255,128,0.3); }
+body.tema-arcade .card.saida .valor { color: #ff4444; text-shadow: 0 0 6px rgba(255,68,68,0.3); }
+body.tema-arcade .btn-nav:hover, body.tema-arcade .btn-hoje:hover { background: #ffcc00; border-color: #ffcc00; color: #1a0a2e; box-shadow: 0 0 12px rgba(255,204,0,0.4); }
+body.tema-arcade .mini-card.verde .valor-mini { color: #00ff80; }
+body.tema-arcade .mini-card.vermelho .valor-mini { color: #ff4444; }
+body.tema-arcade .mini-card.azul .valor-mini { color: #ffcc00; }
+body.tema-arcade .card { border-color: rgba(255,204,0,0.2); }
+body.tema-arcade tbody tr:hover { background: rgba(255,204,0,0.06); }
+body.tema-arcade .logo svg { filter: drop-shadow(0 0 8px rgba(255,204,0,0.5)); }
+body.tema-arcade { background: radial-gradient(500px 250px at 20% 0%, rgba(255,204,0,0.08), transparent 60%), radial-gradient(500px 250px at 80% 100%, rgba(255,102,0,0.06), transparent 60%); background-color: var(--bg-page); background-attachment: fixed; }
+
+/* ========== TEMA DARK SOULS (SANGUE) ========== */
+        body.tema-sangue {
+    --bg-page: #0a0000;
+    --bg-panel: rgba(15, 0, 0, 0.85);
+    --bg-panel-solid: #120000;
+    --bg-header: rgba(10, 0, 0, 0.92);
+    --bg-input: #0a0000;
+    --bg-chart: rgba(10, 0, 0, 0.7);
+    --bg-row-even: rgba(200, 0, 0, 0.03);
+    --border: #330000;
+    --border-glass: rgba(51, 0, 0, 0.7);
+    --text: #ffcccc;
+    --text-muted: #cc6666;
+    --text-dim: #663333;
+    --thead-bg: rgba(18, 0, 0, 0.97);
+    --shadow: rgba(200, 0, 0, 0.15);
+}
+body.tema-sangue{--bg-page:#0a0000;--bg-panel:rgba(15,0,0,0.85);--bg-panel-solid:#120000;--bg-header:rgba(10,0,0,0.92);--bg-input:#0a0000;--bg-chart:rgba(10,0,0,0.7);--bg-row-even:rgba(200,0,0,0.03);--border:#330000;--border-glass:rgba(51,0,0,0.7);--text:#ffcccc;--text-muted:#cc6666;--text-dim:#663333;--thead-bg:rgba(18,0,0,0.97);--shadow:rgba(200,0,0,0.15)}
+body.tema-sangue h1, body.tema-sangue .form-area h2, body.tema-sangue .tabela-header h2, body.tema-sangue .graficos-area h2, body.tema-sangue .gamificacao-area h2, body.tema-sangue .chat-ia-area h2, body.tema-sangue .ia-area h2, body.tema-sangue .categorias-gerenciar h2 { color: #cc0000; text-shadow: 0 0 10px rgba(200,0,0,0.5), 0 0 20px rgba(200,0,0,0.2); }
+body.tema-sangue .btn-add { background: linear-gradient(135deg, #cc0000, #880000); color: #fff; box-shadow: 0 0 12px rgba(200,0,0,0.4); }
+body.tema-sangue .btn-add:hover { box-shadow: 0 0 25px rgba(200,0,0,0.7); }
+body.tema-sangue .card.saldo { background: linear-gradient(135deg, rgba(200,0,0,0.12), rgba(100,0,0,0.08)); border-color: rgba(200,0,0,0.4); box-shadow: 0 0 25px rgba(200,0,0,0.15); }
+body.tema-sangue .mes-atual { color: #ff3333; text-shadow: 0 0 8px rgba(255,51,51,0.4); }
+body.tema-sangue .tipo-badge.entrada { background: rgba(255,100,100,0.15); color: #ff6666; }
+body.tema-sangue .valor-cell.entrada, body.tema-sangue .card.entrada .valor { color: #ff6666; text-shadow: 0 0 6px rgba(255,100,100,0.3); }
+body.tema-sangue .card.saida .valor { color: #ff0000; text-shadow: 0 0 8px rgba(255,0,0,0.4); }
+body.tema-sangue .btn-nav:hover, body.tema-sangue .btn-hoje:hover { background: #cc0000; border-color: #cc0000; color: #fff; box-shadow: 0 0 12px rgba(200,0,0,0.5); }
+body.tema-sangue .mini-card.verde .valor-mini { color: #ff6666; }
+body.tema-sangue .mini-card.vermelho .valor-mini { color: #ff0000; }
+body.tema-sangue .mini-card.azul .valor-mini { color: #cc0000; }
+body.tema-sangue .card { border-color: rgba(200,0,0,0.2); }
+body.tema-sangue tbody tr:hover { background: rgba(200,0,0,0.08); }
+body.tema-sangue .logo svg { filter: drop-shadow(0 0 10px rgba(200,0,0,0.6)); }
+body.tema-sangue { background: radial-gradient(600px 300px at 50% -10%, rgba(200,0,0,0.1), transparent 60%), radial-gradient(400px 200px at 80% 110%, rgba(100,0,0,0.08), transparent 60%); background-color: var(--bg-page); background-attachment: fixed; }
+
+/* ========== TEMA SYNTHWAVE ========== */
+        body.tema-synth {
+    --bg-page: #0f0024;
+    --bg-panel: rgba(15, 0, 36, 0.8);
+    --bg-panel-solid: #180040;
+    --bg-header: rgba(15, 0, 36, 0.9);
+    --bg-input: #0f0024;
+    --bg-chart: rgba(15, 0, 36, 0.7);
+    --bg-row-even: rgba(255, 105, 180, 0.03);
+    --border: #2d0060;
+    --border-glass: rgba(45, 0, 96, 0.7);
+    --text: #ffe6f7;
+    --text-muted: #ff8dc7;
+    --text-dim: #8a4070;
+    --thead-bg: rgba(24, 0, 64, 0.97);
+    --shadow: rgba(255, 105, 180, 0.12);
+}
+body.tema-synth{--bg-page:#0f0024;--bg-panel:rgba(15,0,36,0.8);--bg-panel-solid:#180040;--bg-header:rgba(15,0,36,0.9);--bg-input:#0f0024;--bg-chart:rgba(15,0,36,0.7);--bg-row-even:rgba(255,105,180,0.03);--border:#2d0060;--border-glass:rgba(45,0,96,0.7);--text:#ffe6f7;--text-muted:#ff8dc7;--text-dim:#8a4070;--thead-bg:rgba(24,0,64,0.97);--shadow:rgba(255,105,180,0.12)}
+body.tema-synth h1, body.tema-synth .form-area h2, body.tema-synth .tabela-header h2, body.tema-synth .graficos-area h2, body.tema-synth .gamificacao-area h2, body.tema-synth .chat-ia-area h2, body.tema-synth .ia-area h2, body.tema-synth .categorias-gerenciar h2 { color: #ff69b4; text-shadow: 0 0 10px rgba(255,105,180,0.5), 0 0 30px rgba(255,105,180,0.2), 3px 3px 0 rgba(0,200,255,0.3); }
+body.tema-synth .btn-add { background: linear-gradient(135deg, #ff69b4, #00c8ff); color: #0f0024; box-shadow: 0 0 15px rgba(255,105,180,0.4); }
+body.tema-synth .btn-add:hover { box-shadow: 0 0 30px rgba(255,105,180,0.6), 0 0 60px rgba(0,200,255,0.2); }
+body.tema-synth .card.saldo { background: linear-gradient(135deg, rgba(255,105,180,0.12), rgba(0,200,255,0.08)); border: 2px solid; border-image: linear-gradient(135deg, #ff69b4, #00c8ff) 1; box-shadow: 0 0 30px rgba(255,105,180,0.15); }
+body.tema-synth .mes-atual { background: linear-gradient(90deg, #ff69b4, #00c8ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; filter: drop-shadow(0 0 8px rgba(255,105,180,0.4)); }
+body.tema-synth .tipo-badge.entrada { background: rgba(0,200,255,0.15); color: #00c8ff; }
+body.tema-synth .valor-cell.entrada, body.tema-synth .card.entrada .valor { color: #00c8ff; text-shadow: 0 0 6px rgba(0,200,255,0.3); }
+body.tema-synth .card.saida .valor { color: #ff69b4; text-shadow: 0 0 8px rgba(255,105,180,0.3); }
+body.tema-synth .btn-nav:hover, body.tema-synth .btn-hoje:hover { background: linear-gradient(135deg, #ff69b4, #00c8ff); border-color: #ff69b4; color: #fff; box-shadow: 0 0 15px rgba(255,105,180,0.4); }
+body.tema-synth .mini-card.verde .valor-mini { color: #00c8ff; }
+body.tema-synth .mini-card.vermelho .valor-mini, body.tema-synth .mini-card.azul .valor-mini { color: #ff69b4; }
+body.tema-synth .card { border-color: rgba(255,105,180,0.2); }
+body.tema-synth tbody tr:hover { background: rgba(255,105,180,0.06); }
+body.tema-synth .logo svg { filter: drop-shadow(0 0 12px rgba(255,105,180,0.6)); }
+body.tema-synth { background: radial-gradient(800px 400px at 50% 120%, rgba(255,105,180,0.15), transparent 50%), radial-gradient(600px 300px at 20% -10%, rgba(0,200,255,0.08), transparent 60%); background-color: var(--bg-page); background-attachment: fixed; }
+body.tema-synth::after { content: ''; position: fixed; bottom: 0; left: 0; right: 0; height: 40vh; background: repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(255,105,180,0.06) 49px, rgba(255,105,180,0.06) 50px), repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(255,105,180,0.06) 49px, rgba(255,105,180,0.06) 50px); pointer-events: none; z-index: -1; transform: perspective(300px) rotateX(45deg); transform-origin: bottom center; }
+
+/* ========== SELETOR DE TEMAS (MODAL) ========== */
+        .tema-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .tema-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 8px;
+            border-radius: 10px;
+            border: 2px solid var(--border);
+            background: var(--bg-chart);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            text-align: center;
+        }
+
+        .tema-option:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px var(--shadow);
+        }
+
+        .tema-option.ativo {
+            border-color: var(--primary, #e94560);
+            box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.2);
+        }
+
+        .tema-option-preview {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .tema-option-nome {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .tema-option[data-tema="auto"] .tema-option-preview { background: conic-gradient(#1a1a2e 0deg, #1a1a2e 180deg, #eef2f8 180deg, #eef2f8 360deg); }
+        .tema-option[data-tema="escuro"] .tema-option-preview { background: linear-gradient(135deg, #1a1a2e, #e94560); }
+        .tema-option[data-tema="claro"] .tema-option-preview { background: linear-gradient(135deg, #eef2f8, #448aff); }
+        .tema-option[data-tema="oceano"] .tema-option-preview { background: linear-gradient(135deg, #0a192f, #64ffda); }
+        .tema-option[data-tema="floresta"] .tema-option-preview { background: linear-gradient(135deg, #1a2e1a, #66bb6a); }
+        .tema-option[data-tema="cosmic"] .tema-option-preview { background: linear-gradient(135deg, #1a1030, #ba68ff); }
+        .tema-option[data-tema="ambar"] .tema-option-preview { background: linear-gradient(135deg, #1a1508, #ffc107); }
+        .tema-option[data-tema="minimal"] .tema-option-preview { background: linear-gradient(135deg, #fafafa, #424242); }
+        .tema-option[data-tema="neon"] .tema-option-preview{background:linear-gradient(135deg,#0d0221,#ff00ff,#00ffff)}
+        .tema-option[data-tema="matrix"] .tema-option-preview{background:linear-gradient(135deg,#000a00,#00ff41)}
+        .tema-option[data-tema="arcade"] .tema-option-preview{background:linear-gradient(135deg,#1a0a2e,#ffcc00,#ff6600)} }
+        .tema-option[data-tema="sangue"] .tema-option-preview{background:linear-gradient(135deg,#0f0a0a,#8b0000)}
+        .tema-option[data-tema="synth"] .tema-option-preview{background:linear-gradient(135deg,#0f0a1e,#ff6b9d,#00c8ff)}
+
+        .tema-option[data-tema="neon"] .tema-option-preview{background:linear-gradient(135deg,#0d0221,#ff00ff,#00ffff)}.tema-option[data-tema="matrix"] .tema-option-preview{background:linear-gradient(135deg,#000a00,#00ff41)}.tema-option[data-tema="arcade"] .tema-option-preview{background:linear-gradient(135deg,#1a0a2e,#ffcc00,#ff6600)}.tema-option[data-tema="sangue"] .tema-option-preview{background:linear-gradient(135deg,#0a0000,#cc0000)}.tema-option[data-tema="synth"] .tema-option-preview{background:linear-gradient(135deg,#0f0a1e,#ff6b9d,#00c8ff)}
+
+@media (max-width: 500px) {
+            .tema-selector { grid-template-columns: repeat(2, 1fr); }
         }
 
         body {
@@ -2557,9 +3066,932 @@
             }
         }
 
+        /* ========== TELA DE BLOQUEIO / LOGIN ========== */
+        .lock-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg-page);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .lock-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .lock-container {
+            background: var(--bg-panel);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            max-width: 420px;
+            width: 100%;
+            border: 1px solid var(--border-glass);
+            box-shadow: 0 20px 60px var(--shadow);
+            text-align: center;
+            animation: scaleIn 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .lock-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            display: block;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .lock-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .lock-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .lock-input-group {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        .lock-input {
+            width: 100%;
+            padding: 14px 48px 14px 16px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
+            background: var(--bg-input);
+            color: var(--text);
+            font-size: 1rem;
+            outline: none;
+            transition: all var(--transition-base);
+            text-align: center;
+            letter-spacing: 4px;
+        }
+
+        .lock-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.15);
+        }
+
+        .lock-input.error {
+            border-color: var(--red);
+            animation: shake 0.5s ease;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(-8px); }
+            40% { transform: translateX(8px); }
+            60% { transform: translateX(-4px); }
+            80% { transform: translateX(4px); }
+        }
+
+        .lock-toggle-pwd {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 4px;
+            transition: color var(--transition-fast);
+        }
+
+        .lock-toggle-pwd:hover {
+            color: var(--text);
+        }
+
+        .lock-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, var(--primary), #c73650);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            box-shadow: 0 6px 20px var(--primary-glow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lock-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px var(--primary-glow);
+        }
+
+        .lock-btn:active {
+            transform: translateY(0);
+        }
+
+        .lock-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .lock-btn.loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin: -10px 0 0 -10px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+        }
+
+        .lock-btn.loading span {
+            visibility: hidden;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .lock-error {
+            color: var(--red);
+            font-size: 0.85rem;
+            margin-top: 12px;
+            min-height: 20px;
+            transition: opacity var(--transition-fast);
+        }
+
+        .lock-options {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-subtle);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .lock-option-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            cursor: pointer;
+            padding: 6px;
+            transition: color var(--transition-fast);
+        }
+
+        .lock-option-btn:hover {
+            color: var(--primary);
+        }
+
+        /* Modal de configuração de senha */
+        .pwd-strength {
+            height: 4px;
+            border-radius: 2px;
+            background: var(--border);
+            margin-top: 8px;
+            overflow: hidden;
+            transition: all var(--transition-base);
+        }
+
+        .pwd-strength-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width var(--transition-base), background var(--transition-base);
+            width: 0;
+        }
+
+        .pwd-strength-fill.weak { width: 25%; background: var(--red); }
+        .pwd-strength-fill.fair { width: 50%; background: var(--yellow); }
+        .pwd-strength-fill.good { width: 75%; background: var(--blue); }
+        .pwd-strength-fill.strong { width: 100%; background: var(--green); }
+
+        .pwd-strength-text {
+            font-size: 0.7rem;
+            margin-top: 4px;
+            text-align: right;
+            color: var(--text-muted);
+        }
+
+        /* Botão de cadeado no header */
+        .btn-lock {
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            background: var(--bg-button, var(--bg-panel-solid));
+            color: var(--text);
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-left: 8px;
+        }
+
+        .btn-lock:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .btn-lock.locked {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff;
+        }
+
+        /* Loading overlay global */
+        .app-loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg-page);
+            z-index: 10000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            transition: opacity 0.5s ease;
+        }
+
+        .app-loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .app-loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        .app-loading-text {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .lock-container {
+                padding: 30px 24px;
+            }
+            
+            .lock-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media print {
+            .lock-screen, .app-loading, .btn-lock { display: none !important; }
+        }
+
+        /* ========== SKELETON LOADING ========== */
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        .skeleton {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skeleton::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.04) 50%,
+                transparent 100%
+            );
+            background-size: 200% 100%;
+            animation: shimmer 1.5s ease-in-out infinite;
+            border-radius: inherit;
+        }
+
+        body.tema-claro .skeleton::after {
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(0, 0, 0, 0.04) 50%,
+                transparent 100%
+            );
+            background-size: 200% 100%;
+        }
+
+        .skeleton-text {
+            display: inline-block;
+            height: 1em;
+            width: 70%;
+            border-radius: 4px;
+            background: var(--border);
+        }
+
+        .skeleton-value {
+            display: inline-block;
+            height: 1.7rem;
+            width: 60%;
+            margin: 0 auto;
+            border-radius: 6px;
+            background: var(--border);
+        }
+
+        .card.loading .valor,
+        .card.loading h3,
+        .card.loading .variacao,
+        .card.loading .icone {
+            visibility: hidden;
+        }
+
+        .card.loading::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 1.7rem;
+            border-radius: 6px;
+            background: var(--border);
+            animation: shimmer 1.5s ease-in-out infinite;
+            background-image: linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.06) 50%,
+                transparent 100%
+            );
+            background-size: 200% 100%;
+        }
+
+        .card {
+            position: relative;
+        }
+
+        /* ========== MICRO-ANIMAÇÕES ========== */
+        /* Cards com lift suave */
+        .card {
+            transition: transform var(--duration-base) var(--ease-out-expo),
+                        box-shadow var(--duration-base) var(--ease-out-expo);
+            will-change: transform;
+        }
+
+        .card:hover {
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 16px 40px var(--shadow);
+        }
+
+        .card:active {
+            transform: translateY(-1px) scale(0.99);
+            transition-duration: var(--duration-fast);
+        }
+
+        /* Botões com scale */
+        .btn-nav, .btn-hoje, .btn-ano, .btn-export, .btn-import,
+        .btn-excel, .btn-pdf, .btn-print, .btn-undoback, .btn-limpar,
+        .btn-excluir, .btn-add-meta, .btn-add-recorrente, .btn-refresh-ia,
+        .btn-lock, .btn-tema {
+            transition: all var(--duration-base) var(--ease-out-expo);
+            will-change: transform;
+        }
+
+        .btn-nav:hover, .btn-hoje:hover, .btn-ano:hover,
+        .btn-export:hover, .btn-import:hover, .btn-excel:hover,
+        .btn-pdf:hover, .btn-print:hover, .btn-undoback:hover,
+        .btn-limpar:hover, .btn-excluir:hover, .btn-refresh-ia:hover,
+        .btn-lock:hover, .btn-tema:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-nav:active, .btn-hoje:active, .btn-ano:active,
+        .btn-export:active, .btn-import:active, .btn-excel:active,
+        .btn-pdf:active, .btn-print:active, .btn-undoback:active,
+        .btn-limpar:active, .btn-excluir:active, .btn-refresh-ia:active,
+        .btn-lock:active, .btn-tema:active {
+            transform: translateY(0) scale(0.97);
+            transition-duration: var(--duration-fast);
+        }
+
+        /* Botão + circular com pulse no hover */
+        .btn-add {
+            transition: all var(--duration-base) var(--ease-out-back);
+        }
+
+        .btn-add:hover {
+            transform: scale(1.15) rotate(90deg);
+            box-shadow: 0 6px 24px rgba(233, 69, 96, 0.5);
+        }
+
+        .btn-add:active {
+            transform: scale(0.95) rotate(90deg);
+            transition-duration: var(--duration-fast);
+        }
+
+        /* Linhas da tabela com highlight suave */
+        tbody tr {
+            transition: background var(--duration-fast) ease,
+                        transform var(--duration-fast) ease,
+                        opacity var(--duration-base) ease;
+        }
+
+        tbody tr:hover {
+            background: rgba(233, 69, 96, 0.08);
+            transform: translateX(2px);
+        }
+
+        /* Remoção de linha com animação */
+        tbody tr.removing {
+            opacity: 0;
+            transform: translateX(30px) scale(0.95);
+            max-height: 0;
+            padding: 0;
+            overflow: hidden;
+            transition: all var(--duration-base) var(--ease-out-expo);
+        }
+
+        /* Inputs com glow no focus */
+        .form-group input:focus,
+        .form-group select:focus,
+        .search-area input:focus,
+        .filtros-extra select:focus {
+            box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.15);
+            transform: translateY(-1px);
+            transition: all var(--duration-base) var(--ease-out-expo);
+        }
+
+        /* Insight cards com entrada suave */
+        .insight-card {
+            transition: all var(--duration-base) var(--ease-out-expo);
+            animation: fadeSlideUp var(--duration-slow) var(--ease-out-expo) both;
+        }
+
+        .insight-card:nth-child(1) { animation-delay: 0s; }
+        .insight-card:nth-child(2) { animation-delay: var(--duration-stagger); }
+        .insight-card:nth-child(3) { animation-delay: calc(var(--duration-stagger) * 2); }
+        .insight-card:nth-child(4) { animation-delay: calc(var(--duration-stagger) * 3); }
+        .insight-card:nth-child(5) { animation-delay: calc(var(--duration-stagger) * 4); }
+        .insight-card:nth-child(6) { animation-delay: calc(var(--duration-stagger) * 5); }
+        .insight-card:nth-child(7) { animation-delay: calc(var(--duration-stagger) * 6); }
+        .insight-card:nth-child(8) { animation-delay: calc(var(--duration-stagger) * 7); }
+
+        @keyframes fadeSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px) scale(0.97);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Meta cards e recorrentes com hover lift */
+        .meta-card, .recorrente-item, .categoria-drag-item {
+            transition: all var(--duration-base) var(--ease-out-expo);
+        }
+
+        .meta-card:hover, .recorrente-item:hover {
+            transform: translateY(-2px) translateX(3px);
+            box-shadow: 0 8px 24px var(--shadow);
+        }
+
+        /* ========== GLOW NO SALDO ========== */
+        @keyframes saldoGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(68, 138, 255, 0.2); }
+            50% { box-shadow: 0 0 35px rgba(68, 138, 255, 0.35), 0 0 60px rgba(68, 138, 255, 0.1); }
+        }
+
+        .card.saldo {
+            animation: saldoGlow 3s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card.saldo::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                from 0deg,
+                transparent 0%,
+                rgba(68, 138, 255, 0.05) 25%,
+                transparent 50%
+            );
+            animation: rotateGlow 6s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes rotateGlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .card.saldo:hover {
+            animation-play-state: paused;
+            box-shadow: 0 0 45px rgba(68, 138, 255, 0.4);
+        }
+
+        /* ========== RIPPLE EFFECT ========== */
+        .ripple-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(0);
+            animation: rippleAnim 0.6s ease-out forwards;
+            pointer-events: none;
+        }
+
+        @keyframes rippleAnim {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Aplicar ripple aos botões principais */
+        .btn-add, .btn-nav, .btn-export, .btn-import,
+        .btn-excel, .btn-pdf, .btn-print, .modal-btn-primary,
+        .modal-btn-danger, .lock-btn {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ========== TOAST APRIMORADO ========== */
+        .toast {
+            position: relative;
+            overflow: hidden;
+            animation: toastIn var(--duration-base) var(--ease-out-expo) both;
+        }
+
+        @keyframes toastIn {
+            from {
+                opacity: 0;
+                transform: translateX(40px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0) scale(1);
+            }
+        }
+
+        .toast.removing {
+            animation: toastOut var(--duration-base) var(--ease-out-expo) both;
+        }
+
+        @keyframes toastOut {
+            to {
+                opacity: 0;
+                transform: translateX(40px) scale(0.95);
+            }
+        }
+
+        .toast-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background: currentColor;
+            opacity: 0.3;
+            border-radius: 0 0 0 10px;
+            animation: toastProgress 3s linear forwards;
+        }
+
+        @keyframes toastProgress {
+            from { width: 100%; }
+            to { width: 0%; }
+        }
+
+        .toast.success .toast-progress { background: #00c853; }
+        .toast.error .toast-progress { background: #ff1744; }
+        .toast.warning .toast-progress { background: #ffab00; }
+
+        /* ========== TRANSIÇÃO DE MÊS ========== */
+        @keyframes monthFadeOut {
+            to {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes monthFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .month-transitioning .resumo,
+        .month-transitioning .dashboard,
+        .month-transitioning .graficos-area,
+        .month-transitioning .tabela-area,
+        .month-transitioning .ia-area,
+        .month-transitioning .resumo-anual,
+        .month-transitioning .categorias-gerenciar {
+            animation: monthFadeOut 0.15s ease forwards;
+        }
+
+        .month-entering .resumo,
+        .month-entering .dashboard,
+        .month-entering .graficos-area,
+        .month-entering .tabela-area,
+        .month-entering .ia-area,
+        .month-entering .resumo-anual,
+        .month-entering .categorias-gerenciar {
+            animation: monthFadeIn 0.3s var(--ease-out-expo) both;
+        }
+
+        .month-entering .resumo { animation-delay: 0s; }
+        .month-entering .dashboard { animation-delay: 0.05s; }
+        .month-entering .graficos-area { animation-delay: 0.1s; }
+        .month-entering .ia-area { animation-delay: 0.15s; }
+        .month-entering .tabela-area { animation-delay: 0.2s; }
+        .month-entering .resumo-anual { animation-delay: 0.25s; }
+        .month-entering .categorias-gerenciar { animation-delay: 0.3s; }
+
+        /* ========== BOTÃO COM LOADING ========== */
+        .btn-loading {
+            position: relative;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        .btn-loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 14px;
+            height: 14px;
+            margin: -7px 0 0 -7px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top-color: currentColor;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+        }
+
+        .btn-loading > span,
+        .btn-loading:not(::after) {
+            visibility: hidden;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* ========== BARRAS SUAVES ========== */
+        .poupanca-bar-fill {
+            transition: width 0.8s var(--ease-out-expo);
+        }
+
+        .meta-barra-fill {
+            transition: width 0.8s var(--ease-out-expo),
+                        background 0.5s ease;
+        }
+
+        /* ========== ACESSIBILIDADE: REDUCED MOTION ========== */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .card:hover { transform: none; }
+            .btn-add:hover { transform: none; }
+            .card.saldo { animation: none; }
+            .card.saldo::before { animation: none; display: none; }
+            .insight-card { animation: none; }
+            .ripple { display: none; }
+        }
+
+
+        /* ========== CHAT IA ========== */
+        .chat-area {
+            background: var(--bg-panel);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border-radius: var(--radius-lg);
+            padding: 22px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border-glass);
+            box-shadow: 0 8px 24px var(--shadow);
+        }
+        .chat-area h2 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .chat-sub {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+        .chat-mensagens {
+            background: var(--bg-chart);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            max-height: 340px;
+            overflow-y: auto;
+            display: grid;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .chat-msg {
+            padding: 10px 14px;
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            max-width: 92%;
+            word-break: break-word;
+        }
+        .chat-msg.usuario {
+            background: linear-gradient(135deg, var(--primary), #c73650);
+            color: #fff;
+            margin-left: auto;
+            border-bottom-right-radius: 4px;
+        }
+        .chat-msg.ia {
+            background: var(--bg-panel-solid);
+            border: 1px solid var(--border);
+            color: var(--text);
+            border-bottom-left-radius: 4px;
+        }
+        .chat-valor { font-weight: 800; color: var(--primary); }
+        .chat-positivo { font-weight: 700; color: var(--green); }
+        .chat-negativo { font-weight: 700; color: var(--red); }
+        .chat-typing {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            padding: 10px 14px;
+            background: var(--bg-panel-solid);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            width: fit-content;
+        }
+        .chat-typing span {
+            width: 6px;
+            height: 6px;
+            background: var(--text-muted);
+            border-radius: 50%;
+            animation: chatPulse 1.2s ease-in-out infinite;
+        }
+        .chat-typing span:nth-child(2) { animation-delay: 0.15s; }
+        .chat-typing span:nth-child(3) { animation-delay: 0.3s; }
+        @keyframes chatPulse {
+            0%, 80%, 100% { opacity: 0.3; transform: scale(0.8); }
+            40% { opacity: 1; transform: scale(1); }
+        }
+        .chat-input-area {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .chat-input {
+            flex: 1;
+            padding: 12px 14px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
+            background: var(--bg-input);
+            color: var(--text);
+            font-size: 0.9rem;
+            outline: none;
+            transition: all var(--transition-base);
+        }
+        .chat-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.15);
+        }
+        .chat-send-btn {
+            padding: 12px 18px;
+            border-radius: var(--radius-md);
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            white-space: nowrap;
+        }
+        .chat-send-btn:hover { background: #c73650; transform: translateY(-1px); }
+        .chat-send-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+        .chat-sugestoes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+        .chat-sugestao {
+            padding: 6px 12px;
+            border-radius: 20px;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all var(--transition-base);
+        }
+        .chat-sugestao:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: rgba(233, 69, 96, 0.08);
+        }
+        .chat-count {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            text-align: right;
+            margin-top: 8px;
+        }
+
     </style>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="app-loading" id="appLoading">
+        <div class="app-loading-spinner"></div>
+        <div class="app-loading-text">Carregando seus dados...</div>
+    </div>
+
+    <!-- Lock Screen -->
+    <div class="lock-screen hidden" id="lockScreen">
+        <div class="lock-container">
+            <span class="lock-icon">🔒</span>
+            <h2 class="lock-title">Controle Financeiro</h2>
+            <p class="lock-subtitle" id="lockSubtitle">Digite sua senha para acessar seus dados financeiros.</p>
+            
+            <div class="lock-input-group">
+                <input type="password" class="lock-input" id="lockPassword" 
+                       placeholder="••••••••" maxlength="64" autocomplete="off">
+                <button class="lock-toggle-pwd" onclick="toggleLockPwdVisibility()" title="Mostrar/ocultar senha">👁️</button>
+            </div>
+            
+            <button class="lock-btn" id="lockBtn" onclick="handleLockAction()">
+                <span id="lockBtnText">Desbloquear</span>
+            </button>
+            
+            <div class="lock-error" id="lockError"></div>
+            
+            <div class="lock-options" id="lockOptions" style="display:none;">
+                <button class="lock-option-btn" onclick="resetPassword()">Esqueci minha senha (limpa todos os dados)</button>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <!-- Aviso de Backup -->
         <div class="aviso-backup" id="avisoBackup" style="display:none;">
@@ -2590,6 +4022,7 @@
                 <h1>Controle Financeiro</h1>
                 <span class="data-atual" id="dataAtual"></span>
             </div>
+            <button class="btn-lock" id="btnLock" onclick="toggleLock()" title="Bloquear/Configurar senha">🔒</button>
             <button class="btn-tema" onclick="alternarTema()" title="Alternar tema claro/escuro">&#127763; Tema</button>
         </div>
 
@@ -2607,9 +4040,9 @@
 
         <!-- Navegador de Meses -->
         <div class="navegador-mes animar">
-            <button class="btn-nav" onclick="mudarMes(-1)">&#9664;</button>
+            <button class="btn-nav" onclick="mudarMesComTransicao(-1)">&#9664;</button>
             <div class="mes-atual" id="mesAtual"></div>
-            <button class="btn-nav" onclick="mudarMes(1)">&#9654;</button>
+            <button class="btn-nav" onclick="mudarMesComTransicao(1)">&#9654;</button>
             <button class="btn-hoje" onclick="voltarHoje()">Hoje</button>
         </div>
 
@@ -2806,22 +4239,28 @@
     </div>
 
     <script>
-        function showToast(mensagem, tipo) {
+        function showToast(mensagem, tipo, duracao = 3000) {
             let container = document.querySelector('.toast-container');
             if (!container) {
                 container = document.createElement('div');
                 container.className = 'toast-container';
                 document.body.appendChild(container);
             }
+            
             const toast = document.createElement('div');
             toast.className = 'toast' + (tipo ? ' ' + tipo : '');
-            toast.textContent = mensagem;
+            toast.innerHTML = `
+                <span>${mensagem}</span>
+                <div class="toast-progress" style="animation-duration:${duracao}ms"></div>
+            `;
             container.appendChild(toast);
+            
             requestAnimationFrame(() => toast.classList.add('show'));
+            
             setTimeout(() => {
-                toast.classList.remove('show');
-                setTimeout(() => toast.remove(), 350);
-            }, 3000);
+                toast.classList.add('removing');
+                setTimeout(() => toast.remove(), 300);
+            }, duracao);
         }
 
         // ========== SISTEMA DE MODAIS ==========
@@ -2956,59 +4395,124 @@
         const DIAS_SEMANA = ['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'];
 
         // ========== SISTEMA DE TEMA (Auto/Claro/Escuro) ==========
-        function alternarTema() {
-            const temaAtual = localStorage.getItem('tema') || 'auto';
-            let novoTema;
-
-            if (temaAtual === 'auto') {
-                novoTema = 'claro';
-            } else if (temaAtual === 'claro') {
-                novoTema = 'escuro';
-            } else {
-                novoTema = 'auto';
-            }
-
-            localStorage.setItem('tema', novoTema);
-            aplicarTema(novoTema);
-            atualizarIconeTema(novoTema);
-            atualizarTemasGraficos();
-            showToast(`Tema: ${novoTema === 'auto' ? 'Automático' : novoTema === 'claro' ? 'Claro' : 'Escuro'}`, 'success');
+        async function alternarTema() {
+            abrirSeletorTema();
         }
 
+        function selecionarTema(tema) {
+            localStorage.setItem('tema', tema);
+            aplicarTema(tema);
+            atualizarIconeTema(tema);
+            atualizarTemasGraficos();
+            const nomes = { 'auto': 'Automático', 'claro': 'Claro', 'escuro': 'Escuro', 'oceano': 'Oceano', 'floresta': 'Floresta', 'cosmic': 'Cosmic', 'ambar': 'Âmbar', 'minimal': 'Minimal' };
+            showToast(`Tema: ${nomes[tema] || tema}`, 'success');
+            closeModal();
+        }
+
+        function abrirSeletorTema() {
+            const temaAtual = localStorage.getItem('tema') || 'auto';
+            const temas = [
+                { id: 'auto', nome: 'Auto', desc: 'Sistema' },
+                { id: 'claro', nome: 'Claro', desc: 'Claro' },
+                { id: 'escuro', nome: 'Escuro', desc: 'Escuro' },
+                { id: 'oceano', nome: 'Oceano', desc: 'Azul' },
+                { id: 'floresta', nome: 'Floresta', desc: 'Verde' },
+                { id: 'cosmic', nome: 'Cosmic', desc: 'Roxo' },
+                { id: 'ambar', nome: 'Âmbar', desc: 'Dourado' },
+                { id: 'minimal', nome: 'Minimal', desc: 'Claro' }
+            ];
+            const html = `<div class="tema-selector">` + temas.map(t => `
+                <div class="tema-option ${temaAtual === t.id ? 'ativo' : ''}" data-tema="${t.id}" onclick="selecionarTema('${t.id}')">
+                    <div class="tema-option-preview"></div>
+                    <div class="tema-option-nome">${t.nome}</div>
+                </div>
+            `).join('') + `</div>`;
+            showModal({
+                title: '🎨 Escolher Tema',
+                customContent: html,
+                confirmText: 'Fechar'
+            });
+        }
+
+        const TEMAS_DISPONIVEIS = [
+            { id: 'auto', nome: 'Auto', icone: '🔄', desc: 'Segue o sistema' },
+            { id: 'escuro', nome: 'Escuro', icone: '🌙', desc: 'Padrão original' },
+            { id: 'claro', nome: 'Claro', icone: '☀️', desc: 'Fundo claro' },
+            { id: 'oceano', nome: 'Oceano', icone: '🌊', desc: 'Azul profundo' },
+            { id: 'floresta', nome: 'Floresta', icone: '🌲', desc: 'Verde natural' },
+            { id: 'cosmic', nome: 'Cosmic', icone: '🔮', desc: 'Roxo espacial' },
+            { id: 'ambar', nome: 'Âmbar', icone: '✨', desc: 'Dourado quente' },
+            { id: 'minimal', nome: 'Minimal', icone: '⬜', desc: 'Clean e simples' },
+            { id: 'neon', nome: 'Neon', icone: '💜', desc: 'Cyberpunk neon' },
+            { id: 'matrix', nome: 'Matrix', icone: '💚', desc: 'Chuva verde digital' },
+            { id: 'arcade', nome: 'Arcade', icone: '🕹️', desc: 'Retro arcade' },
+            { id: 'sangue', nome: 'Dark Souls', icone: '🩸', desc: 'Vermelho sombrio' },
+            { id: 'synth', nome: 'Synthwave', icone: '🌆', desc: 'Retrowave anos 80' },
+	    { id: 'neon', nome: 'Neon', icone: '💜', desc: 'Cyberpunk neon' },
+            { id: 'matrix', nome: 'Matrix', icone: '💚', desc: 'Chuva verde digital' },
+            { id: 'arcade', nome: 'Arcade', icone: '🕹️', desc: 'Retro arcade' },
+            { id: 'sangue', nome: 'Dark Souls', icone: '🩸', desc: 'Vermelho sombrio' },
+            { id: 'synth', nome: 'Synthwave', icone: '🌆', desc: 'Retrowave anos 80' },
+        ];
+
+        const TODAS_CLASSES_TEMA = ['tema-claro', 'tema-oceano', 'tema-floresta', 'tema-cosmic', 'tema-ambar', 'tema-minimal', 'tema-neon', 'tema-matrix', 'tema-arcade', 'tema-sangue', 'tema-synth'];
+
         function aplicarTema(tema) {
-            if (tema === 'auto') {
-                const prefereEscuro = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                document.body.classList.toggle('tema-claro', !prefereEscuro);
-            } else if (tema === 'claro') {
-                document.body.classList.add('tema-claro');
-            } else {
-                document.body.classList.remove('tema-claro');
+            TODAS_CLASSES_TEMA.forEach(c => document.body.classList.remove(c));
+
+            switch (tema) {
+                case 'auto':
+                    const prefereEscuro = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    if (!prefereEscuro) document.body.classList.add('tema-claro');
+                    break;
+                case 'claro':    document.body.classList.add('tema-claro'); break;
+                case 'oceano':   document.body.classList.add('tema-oceano'); break;
+                case 'floresta': document.body.classList.add('tema-floresta'); break;
+                case 'cosmic':   document.body.classList.add('tema-cosmic'); break;
+                case 'ambar':    document.body.classList.add('tema-ambar'); break;
+                case 'minimal':  document.body.classList.add('tema-minimal'); break;
+                case 'neon':     document.body.classList.add('tema-neon'); break;
+                case 'matrix':   document.body.classList.add('tema-matrix'); break;
+                case 'arcade':   document.body.classList.add('tema-arcade'); break;
+                case 'sangue':   document.body.classList.add('tema-sangue'); break;
+                case 'synth':    document.body.classList.add('tema-synth'); break;
+                case 'escuro':
+                default: break;
             }
         }
 
         function atualizarIconeTema(tema) {
             const btn = document.querySelector('.btn-tema');
             if (!btn) return;
-            if (tema === 'auto') {
-                btn.innerHTML = '&#9898; Auto';
-            } else if (tema === 'claro') {
-                btn.innerHTML = '&#9728;&#65039; Claro';
-            } else {
-                btn.innerHTML = '&#127769; Escuro';
-            }
+            const nomes = {
+                'auto': '&#9898; Auto',
+                'claro': '&#9728;&#65039; Claro',
+                'escuro': '&#127769; Escuro',
+                'oceano': '🌊 Oceano',
+                'floresta': '🌲 Floresta',
+                'cosmic': '🔮 Cosmic',
+                'ambar': '🟡 Âmbar',
+                'minimal': '⚪ Minimal'
+            };
+            btn.innerHTML = nomes[tema] || '&#9898; Auto';
         }
 
-        function aplicarTemaSalvo() {
+        let themeListenerAdded = false;
+
+                        function aplicarTemaSalvo() {
             const tema = localStorage.getItem('tema') || 'auto';
             aplicarTema(tema);
             atualizarIconeTema(tema);
-
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-                if ((localStorage.getItem('tema') || 'auto') === 'auto') {
-                    aplicarTema('auto');
-                    atualizarTemasGraficos();
-                }
-            });
+            
+            if (!themeListenerAdded) {
+                themeListenerAdded = true;
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                    if ((localStorage.getItem('tema') || 'auto') === 'auto') {
+                        aplicarTema('auto');
+                        atualizarTemasGraficos();
+                    }
+                });
+            }
         }
 
         function corVar(nome) {
@@ -3016,7 +4520,9 @@
         }
 
         function atualizarTemasGraficos() {
-            if (typeof renderizar === 'function') renderizar();
+            if (typeof renderizar === 'function') {
+                renderizar().catch(console.error);
+            }
         }
 
         function lembreteAtivo() {
@@ -3094,7 +4600,846 @@
         // Mês financeiro: começa no dia 5 (ciclo de pagamento) — dias 1 a 4 pertencem ao mês anterior
         const DIA_CORTE = 5;
 
-        let lancamentos = JSON.parse(localStorage.getItem('lancamentos')) || [];
+        let lancamentos = [];
+        let eventosConfigurados = false;
+        // ========== STORAGE MANAGER (IndexedDB + Crypto) ==========
+        class StorageManager {
+            constructor() {
+                this.dbName = 'FinanceiroDB';
+                this.dbVersion = 1;
+                this.db = null;
+                this.cryptoKey = null;
+                this.isUnlocked = false;
+                this.hasPassword = false;
+                this.STORES = ['config', 'data'];
+                this.ENCRYPTED_KEYS = ['lancamentos', 'ordemCategorias', 'gamificacao'];
+                this.CONFIG_KEYS = ['tema', 'lembrete', 'ultimoLembrete', 'ultimoBackup', 
+                                   'backupDispensado', 'contaAtiva', 'ultimoAlertaIA',
+                                   'ultimoProcessamentoRecorrentes'];
+            }
+
+            async init() {
+                return new Promise((resolve, reject) => {
+                    const request = indexedDB.open(this.dbName, this.dbVersion);
+                    request.onupgradeneeded = (event) => {
+                        const db = event.target.result;
+                        if (!db.objectStoreNames.contains('config')) db.createObjectStore('config', { keyPath: 'key' });
+                        if (!db.objectStoreNames.contains('data')) db.createObjectStore('data', { keyPath: 'key' });
+                    };
+                    request.onsuccess = (event) => { this.db = event.target.result; resolve(); };
+                    request.onerror = () => reject(request.error);
+                });
+            }
+
+            async checkPasswordExists() {
+                const auth = await this._getConfig('_auth');
+                this.hasPassword = !!auth;
+                return this.hasPassword;
+            }
+
+            async setPassword(password) {
+                if (password.length < 4) throw new Error('A senha deve ter pelo menos 4 caracteres.');
+                const salt = crypto.getRandomValues(new Uint8Array(16));
+                const keyMaterial = await this._getKeyMaterial(password);
+                const derivedKey = await this._deriveKey(keyMaterial, salt);
+                const testData = { test: true, timestamp: Date.now() };
+                const encrypted = await this._encrypt(testData, derivedKey);
+                await this._saveConfig('_auth', { salt: Array.from(salt), verify: encrypted, created: Date.now() });
+                if (!this.isUnlocked) {
+                    this.cryptoKey = derivedKey;
+                    this.isUnlocked = true;
+                    await this._migrateFromLocalStorage();
+                } else {
+                    this.cryptoKey = derivedKey;
+                    await this._reEncryptAll();
+                }
+                return true;
+            }
+
+            async unlock(password) {
+                const auth = await this._getConfig('_auth');
+                if (!auth) { this.isUnlocked = true; return true; }
+                try {
+                    const salt = new Uint8Array(auth.salt);
+                    const keyMaterial = await this._getKeyMaterial(password);
+                    const derivedKey = await this._deriveKey(keyMaterial, salt);
+                    await this._decrypt(auth.verify, derivedKey);
+                    this.cryptoKey = derivedKey;
+                    this.isUnlocked = true;
+                    return true;
+                } catch (e) { throw new Error('Senha incorreta.'); }
+            }
+
+            async changePassword(oldPassword, newPassword) {
+                await this.unlock(oldPassword);
+                await this.setPassword(newPassword);
+                return true;
+            }
+
+            async removePassword() {
+                const allData = {};
+                for (const key of this.ENCRYPTED_KEYS) {
+                    const data = await this.load(key);
+                    if (data !== null && data !== undefined) allData[key] = data;
+                }
+                await this._deleteConfig('_auth');
+                this.cryptoKey = null;
+                this.hasPassword = false;
+                for (const [key, value] of Object.entries(allData)) {
+                    await this.save(key, value);
+                }
+                this.isUnlocked = true;
+                return true;
+            }
+
+            async save(key, data) {
+                if (!this.db) throw new Error('Banco não inicializado.');
+                const shouldEncrypt = this.ENCRYPTED_KEYS.includes(key) && this.cryptoKey;
+                let valueToStore = data;
+                if (shouldEncrypt) valueToStore = await this._encrypt(data, this.cryptoKey);
+                const storeName = this.CONFIG_KEYS.includes(key) || key.startsWith('_') ? 'config' : 'data';
+                return new Promise((resolve, reject) => {
+                    const tx = this.db.transaction(storeName, 'readwrite');
+                    const store = tx.objectStore(storeName);
+                    const request = store.put({ key, value: valueToStore, encrypted: shouldEncrypt, updated: Date.now() });
+                    request.onsuccess = () => resolve();
+                    request.onerror = () => reject(request.error);
+                });
+            }
+
+            async load(key) {
+                if (!this.db) throw new Error('Banco não inicializado.');
+                const storeName = this.CONFIG_KEYS.includes(key) || key.startsWith('_') ? 'config' : 'data';
+                return new Promise(async (resolve, reject) => {
+                    const tx = this.db.transaction(storeName, 'readonly');
+                    const store = tx.objectStore(storeName);
+                    const request = store.get(key);
+                    request.onsuccess = async () => {
+                        const result = request.result;
+                        if (!result) { resolve(null); return; }
+                        if (result.encrypted && this.cryptoKey) {
+                            try { const decrypted = await this._decrypt(result.value, this.cryptoKey); resolve(decrypted); }
+                            catch (e) { console.error(`Erro ao descriptografar ${key}:`, e); resolve(null); }
+                        } else { resolve(result.value); }
+                    };
+                    request.onerror = () => reject(request.error);
+                });
+            }
+
+            async delete(key) {
+                if (!this.db) return;
+                const storeName = this.CONFIG_KEYS.includes(key) || key.startsWith('_') ? 'config' : 'data';
+                return new Promise((resolve, reject) => {
+                    const tx = this.db.transaction(storeName, 'readwrite');
+                    const store = tx.objectStore(storeName);
+                    const request = store.delete(key);
+                    request.onsuccess = () => resolve();
+                    request.onerror = () => reject(request.error);
+                });
+            }
+
+            async exportAll() {
+                const exportData = { version: 2, exported: new Date().toISOString(), encrypted: !!this.cryptoKey, data: {} };
+                for (const key of this.ENCRYPTED_KEYS) {
+                    const data = await this.load(key);
+                    if (data !== null && data !== undefined) exportData.data[key] = data;
+                }
+                for (const key of this.CONFIG_KEYS) {
+                    const data = await this._getConfig(key);
+                    if (data !== null && data !== undefined) exportData.data[key] = data;
+                }
+                return exportData;
+            }
+
+            async importAll(importData, merge = false) {
+                if (!importData || !importData.data) throw new Error('Formato de importação inválido.');
+                if (!merge) { for (const key of this.ENCRYPTED_KEYS) await this.delete(key); }
+                for (const [key, value] of Object.entries(importData.data)) {
+                    if (key.startsWith('_')) continue;
+                    if (this.ENCRYPTED_KEYS.includes(key)) {
+                        if (merge) {
+                            const existing = await this.load(key);
+                            if (Array.isArray(existing) && Array.isArray(value)) {
+                                const existingIds = new Set(existing.map(item => item.id));
+                                const newItems = value.filter(item => !existingIds.has(item.id));
+                                await this.save(key, [...existing, ...newItems]);
+                            } else { await this.save(key, value); }
+                        } else { await this.save(key, value); }
+                    } else if (this.CONFIG_KEYS.includes(key)) { await this._saveConfig(key, value); }
+                }
+                return true;
+            }
+
+            async resetAll() {
+                return new Promise((resolve, reject) => {
+                    const request = indexedDB.deleteDatabase(this.dbName);
+                    request.onsuccess = () => { this.db = null; this.cryptoKey = null; this.isUnlocked = false; this.hasPassword = false; resolve(); };
+                    request.onerror = () => reject(request.error);
+                });
+            }
+
+            async _getKeyMaterial(password) {
+                const encoder = new TextEncoder();
+                return crypto.subtle.importKey('raw', encoder.encode(password), { name: 'PBKDF2' }, false, ['deriveKey']);
+            }
+
+            async _deriveKey(keyMaterial, salt) {
+                return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: salt, iterations: 100000, hash: 'SHA-256' }, keyMaterial, { name: 'AES-GCM', length: 256 }, false, ['encrypt', 'decrypt']);
+            }
+
+            async _encrypt(data, key) {
+                const encoder = new TextEncoder();
+                const iv = crypto.getRandomValues(new Uint8Array(12));
+                const encoded = encoder.encode(JSON.stringify(data));
+                const encrypted = await crypto.subtle.encrypt({ name: 'AES-GCM', iv: iv }, key, encoded);
+                return { iv: Array.from(iv), data: Array.from(new Uint8Array(encrypted)) };
+            }
+
+            async _decrypt(encryptedObj, key) {
+                const decoder = new TextDecoder();
+                const iv = new Uint8Array(encryptedObj.iv);
+                const data = new Uint8Array(encryptedObj.data);
+                const decrypted = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: iv }, key, data);
+                return JSON.parse(decoder.decode(decrypted));
+            }
+
+            async _getConfig(key) {
+                if (!this.db) return null;
+                return new Promise((resolve) => {
+                    const tx = this.db.transaction('config', 'readonly');
+                    const store = tx.objectStore('config');
+                    const request = store.get(key);
+                    request.onsuccess = () => resolve(request.result ? request.result.value : null);
+                    request.onerror = () => resolve(null);
+                });
+            }
+
+            async _saveConfig(key, value) {
+                if (!this.db) return;
+                return new Promise((resolve, reject) => {
+                    const tx = this.db.transaction('config', 'readwrite');
+                    const store = tx.objectStore('config');
+                    const request = store.put({ key, value, updated: Date.now() });
+                    request.onsuccess = () => resolve();
+                    request.onerror = () => reject(request.error);
+                });
+            }
+
+            async _deleteConfig(key) {
+                if (!this.db) return;
+                return new Promise((resolve) => {
+                    const tx = this.db.transaction('config', 'readwrite');
+                    const store = tx.objectStore('config');
+                    store.delete(key);
+                    tx.oncomplete = () => resolve();
+                });
+            }
+
+            async _migrateFromLocalStorage() {
+                console.log('[Storage] Migrando dados do localStorage...');
+                const lancamentosStr = localStorage.getItem('lancamentos');
+                if (lancamentosStr) {
+                    try { const lancamentos = JSON.parse(lancamentosStr); await this.save('lancamentos', lancamentos); console.log(`[Storage] ${lancamentos.length} lançamentos migrados.`); } catch (e) { console.error('[Storage] Erro ao migrar lancamentos:', e); }
+                }
+                const ordemStr = localStorage.getItem('ordemCategorias');
+                if (ordemStr) { try { const ordem = JSON.parse(ordemStr); await this.save('ordemCategorias', ordem); } catch (e) {} }
+                for (const key of this.CONFIG_KEYS) {
+                    const value = localStorage.getItem(key);
+                    if (value !== null) await this._saveConfig(key, value);
+                }
+                console.log('[Storage] Migração concluída.');
+            }
+
+            async _reEncryptAll() {
+                for (const key of this.ENCRYPTED_KEYS) {
+                    const data = await this.load(key);
+                    if (data !== null && data !== undefined) await this.save(key, data);
+                }
+            }
+        }
+
+        const storage = new StorageManager();
+        // ========== CHAT IA — MOTOR DE RESPOSTAS ==========
+        let chatHistorico = [];
+
+        function processarPergunta(pergunta) {
+            const p = pergunta.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            const agora = new Date();
+            
+            // === DADOS BASE ===
+            const totalLancamentos = lancamentos.length;
+            const doMesAtual = filtrarMes();
+            const totalEntradasMes = doMesAtual.filter(l => l.tipo === 'entrada').reduce((s, l) => s + l.valor, 0);
+            const totalSaidasMes = doMesAtual.filter(l => l.tipo === 'saida').reduce((s, l) => s + l.valor, 0);
+            const saldoMes = totalEntradasMes - totalSaidasMes;
+            
+            // Totais gerais
+            const totalEntradasGeral = lancamentos.filter(l => l.tipo === 'entrada').reduce((s, l) => s + l.valor, 0);
+            const totalSaidasGeral = lancamentos.filter(l => l.tipo === 'saida').reduce((s, l) => s + l.valor, 0);
+            const saldoGeral = totalEntradasGeral - totalSaidasGeral;
+            
+            // Gastos por categoria (mês atual)
+            const gastosCat = {};
+            doMesAtual.filter(l => l.tipo === 'saida').forEach(l => {
+                const cat = l.categoria || 'Outros';
+                gastosCat[cat] = (gastosCat[cat] || 0) + l.valor;
+            });
+            const catOrdenadas = Object.entries(gastosCat).sort((a, b) => b[1] - a[1]);
+            
+            // Gastos por categoria (geral)
+            const gastosCatGeral = {};
+            lancamentos.filter(l => l.tipo === 'saida').forEach(l => {
+                const cat = l.categoria || 'Outros';
+                gastosCatGeral[cat] = (gastosCatGeral[cat] || 0) + l.valor;
+            });
+            const catGeralOrdenadas = Object.entries(gastosCatGeral).sort((a, b) => b[1] - a[1]);
+            
+            // Saldos por mês
+            const saldosPorMes = {};
+            const entradasPorMes = {};
+            const saidasPorMes = {};
+            lancamentos.forEach(l => {
+                const chave = chaveFinanceira(l.data);
+                if (!saldosPorMes[chave]) { saldosPorMes[chave] = 0; entradasPorMes[chave] = 0; saidasPorMes[chave] = 0; }
+                saldosPorMes[chave] += l.tipo === 'entrada' ? l.valor : -l.valor;
+                if (l.tipo === 'entrada') entradasPorMes[chave] += l.valor;
+                else saidasPorMes[chave] += l.valor;
+            });
+            
+            // Média diária
+            const diasComDados = new Set(lancamentos.map(l => l.data)).size;
+            const mediaDiariaGeral = diasComDados > 0 ? totalSaidasGeral / diasComDados : 0;
+            
+            const inicioCiclo = new Date(anoAtual, mesAtual, DIA_CORTE);
+            const diasDecorridos = Math.max(1, Math.round((agora - inicioCiclo) / 86400000));
+            const mediaDiariaMes = totalSaidasMes / diasDecorridos;
+            
+            // === PATTERN MATCHING ===
+            
+            // 1. GASTOS DO MÊS / QUANTO GASTEI
+            if (match(p, ['quanto gastei', 'gastos do mes', 'total de gastos', 'quanto sai', 'despesas'])) {
+                if (totalSaidasMes === 0) return 'Voce nao registrou nenhuma saida neste mes ainda.';
+                return `Neste mes (${MESES[mesAtual]}), voce gastou <span class="chat-valor">${formatarMoeda(totalSaidasMes)}</span> em ${doMesAtual.filter(l => l.tipo === 'saida').length} lancamentos. Sua media diaria e de <span class="chat-valor">${formatarMoeda(mediaDiariaMes)}</span>.`;
+            }
+            
+            // 2. ENTRADAS / RECEITAS / QUANTO GANHEI
+            if (match(p, ['quanto ganhei', 'receitas', 'entradas do mes', 'salario', 'quanto entrei', 'renda'])) {
+                if (totalEntradasMes === 0) return 'Voce nao registrou entradas neste mes ainda.';
+                return `Neste mes, suas entradas somam <span class="chat-positivo">${formatarMoeda(totalEntradasMes)}</span> em ${doMesAtual.filter(l => l.tipo === 'entrada').length} lancamentos.`;
+            }
+            
+            // 3. SALDO DO MÊS
+            if (match(p, ['saldo do mes', 'saldo atual', 'quanto sobrou', 'balance', 'liquido'])) {
+                const cls = saldoMes >= 0 ? 'chat-positivo' : 'chat-negativo';
+                return `O saldo de ${MESES[mesAtual]} e de <span class="${cls}">${formatarMoeda(saldoMes)}</span>. Entradas: ${formatarMoeda(totalEntradasMes)} | Saidas: ${formatarMoeda(totalSaidasMes)}.`;
+            }
+            
+            // 4. SALDO GERAL / ACUMULADO
+            if (match(p, ['saldo geral', 'saldo acumulado', 'saldo total', 'patrimonio', 'quanto tenho'])) {
+                const cls = saldoGeral >= 0 ? 'chat-positivo' : 'chat-negativo';
+                return `Seu saldo acumulado geral e de <span class="${cls}">${formatarMoeda(saldoGeral)}</span>. Total de entradas: ${formatarMoeda(totalEntradasGeral)} | Total de saidas: ${formatarMoeda(totalSaidasGeral)}.`;
+            }
+            
+            // 5. MAIOR CATEGORIA
+            if (match(p, ['maior categoria', 'mais gasto', 'onde gasto mais', 'categoria principal', 'maior despesa'])) {
+                if (catOrdenadas.length === 0) return 'Sem gastos registrados neste mes para analisar.';
+                const [nome, valor] = catOrdenadas[0];
+                const pct = totalSaidasMes > 0 ? ((valor / totalSaidasMes) * 100).toFixed(1) : 0;
+                return `Sua maior categoria neste mes e <span class="chat-valor">${nome}</span> com <span class="chat-negativo">${formatarMoeda(valor)}</span> (${pct}% dos gastos). Top 3: ${catOrdenadas.slice(0, 3).map(([n, v]) => `${n}: ${formatarMoeda(v)}`).join(' | ')}.`;
+            }
+            
+            // 6. MAIOR CATEGORIA GERAL
+            if (match(p, ['categoria geral', 'historico de categorias', 'onde mais gasto no total'])) {
+                if (catGeralOrdenadas.length === 0) return 'Sem dados suficientes.';
+                return `No historico completo, sua maior categoria e <span class="chat-valor">${catGeralOrdenadas[0][0]}</span> com ${formatarMoeda(catGeralOrdenadas[0][1])}. Top 5: ${catGeralOrdenadas.slice(0, 5).map(([n, v]) => `${n}: ${formatarMoeda(v)}`).join(' | ')}.`;
+            }
+            
+            // 7. ECONOMIA / POUPANÇA
+            if (match(p, ['quanto economizei', 'poupanca', 'poupei', 'saving', 'economia'])) {
+                if (saldoMes <= 0) return `Neste mes voce ainda nao poupou. Saldo atual: <span class="chat-negativo">${formatarMoeda(saldoMes)}</span>. Tenda reduzir gastos em ${catOrdenadas[0] ? catOrdenadas[0][0] : 'alguma categoria'}.`;
+                const taxa = totalEntradasMes > 0 ? ((saldoMes / totalEntradasMes) * 100).toFixed(1) : 0;
+                return `Voce economizou <span class="chat-positivo">${formatarMoeda(saldoMes)}</span> neste mes! Isso representa <span class="chat-valor">${taxa}%</span> das suas entradas. ${parseFloat(taxa) >= 20 ? 'Excelente resultado! 🎉' : parseFloat(taxa) >= 10 ? 'Bom resultado! 👍' : 'Pode melhorar. 💪'}`;
+            }
+            
+            // 8. MELHOR MÊS
+            if (match(p, ['melhor mes', 'mes mais rentavel', 'recorde', 'top mes'])) {
+                const meses = Object.entries(saldosPorMes).sort((a, b) => b[1] - a[1]);
+                if (meses.length === 0) return 'Sem dados suficientes para determinar o melhor mes.';
+                const [chave, saldo] = meses[0];
+                const [ano, mes] = chave.split('-');
+                return `Seu melhor mes foi <span class="chat-valor">${MESES[parseInt(mes) - 1]} ${ano}</span> com saldo de <span class="chat-positivo">${formatarMoeda(saldo)}</span>. Top 3: ${meses.slice(0, 3).map(([k, v]) => { const [a, m] = k.split('-'); return `${MESES[parseInt(m)-1]} ${a}: ${formatarMoeda(v)}`; }).join(' | ')}.`;
+            }
+            
+            // 9. PIOR MÊS
+            if (match(p, ['pior mes', 'mes ruim', 'prejuizo', 'deficit'])) {
+                const meses = Object.entries(saldosPorMes).sort((a, b) => a[1] - b[1]);
+                if (meses.length === 0) return 'Sem dados suficientes.';
+                const [chave, saldo] = meses[0];
+                const [ano, mes] = chave.split('-');
+                return `Seu pior mes foi <span class="chat-valor">${MESES[parseInt(mes) - 1]} ${ano}</span> com saldo de <span class="chat-negativo">${formatarMoeda(saldo)}</span>.`;
+            }
+            
+            // 10. TOTAL DE LANÇAMENTOS
+            if (match(p, ['quantos lancamentos', 'total de registros', 'quantas transacoes', 'numero de'])) {
+                return `Voce tem <span class="chat-valor">${totalLancamentos}</span> lancamentos no total. Neste mes: <span class="chat-valor">${doMesAtual.length}</span>. Sendo ${lancamentos.filter(l => l.tipo === 'entrada').length} entradas e ${lancamentos.filter(l => l.tipo === 'saida').length} saidas.`;
+            }
+            
+            // 11. MÉDIA DIÁRIA
+            if (match(p, ['media diaria', 'gasto por dia', 'quanto gasto por dia', 'daily'])) {
+                return `Sua media diaria de gastos e de <span class="chat-valor">${formatarMoeda(mediaDiariaGeral)}</span> (geral) e <span class="chat-valor">${formatarMoeda(mediaDiariaMes)}</span> (este mes). Em ${diasComDados} dias com registros.`;
+            }
+            
+            // 12. GASTO EM CATEGORIA ESPECÍFICA
+            const catMatch = encontrarCategoria(p);
+            if (catMatch) {
+                const gastoMes = gastosCat[catMatch] || 0;
+                const gastoGeral = gastosCatGeral[catMatch] || 0;
+                const qtdMes = doMesAtual.filter(l => (l.categoria || 'Outros') === catMatch).length;
+                if (gastoMes === 0 && gastoGeral === 0) return `Voce nao tem gastos registrados na categoria "${catMatch}".`;
+                return `Em <span class="chat-valor">${catMatch}</span>: neste mes <span class="chat-negativo">${formatarMoeda(gastoMes)}</span> (${qtdMes} lancamentos). No historico total: <span class="chat-negativo">${formatarMoeda(gastoGeral)}</span>.`;
+            }
+            
+            // 13. COMPARAR MESES
+            const mesesComp = extrairMeses(p);
+            if (mesesComp.length >= 2) {
+                const [m1, m2] = mesesComp;
+                const chave1 = getChaveMes(anoAtual, m1);
+                const chave2 = getChaveMes(anoAtual, m2);
+                const s1 = saldosPorMes[chave1] || 0;
+                const s2 = saldosPorMes[chave2] || 0;
+                const dif = s1 - s2;
+                const cls = dif >= 0 ? 'chat-positivo' : 'chat-negativo';
+                return `<span class="chat-valor">${MESES[m1]}</span>: ${formatarMoeda(s1)} | <span class="chat-valor">${MESES[m2]}</span>: ${formatarMoeda(s2)}. Diferenca: <span class="${cls}">${formatarMoeda(Math.abs(dif))}</span> a favor de ${dif >= 0 ? MESES[m1] : MESES[m2]}.`;
+            }
+            
+            // 14. MAIOR GASTO ÚNICO
+            if (match(p, ['maior gasto', 'compra mais cara', 'mais caro', 'biggest'])) {
+                const saidas = lancamentos.filter(l => l.tipo === 'saida').sort((a, b) => b.valor - a.valor);
+                if (saidas.length === 0) return 'Sem gastos registrados.';
+                const top = saidas[0];
+                return `Seu maior gasto unico foi <span class="chat-negativo">${formatarMoeda(top.valor)}</span> em "${top.descricao}" (${formatarData(top.data)}, categoria: ${top.categoria || 'Outros'}). Top 3: ${saidas.slice(0, 3).map(l => `${l.descricao}: ${formatarMoeda(l.valor)}`).join(' | ')}.`;
+            }
+            
+            // 15. TAXA DE POUPANÇA
+            if (match(p, ['taxa de poupanca', 'percentual', 'porcentagem que poupo'])) {
+                const taxa = totalEntradasGeral > 0 ? ((saldoGeral / totalEntradasGeral) * 100).toFixed(1) : 0;
+                return `Sua taxa de poupanca geral e de <span class="chat-valor">${taxa}%</span>. Neste mes: <span class="chat-valor">${totalEntradasMes > 0 ? ((saldoMes / totalEntradasMes) * 100).toFixed(1) : 0}%</span>.`;
+            }
+            
+            // 16. TENDÊNCIA
+            if (match(p, ['tendencia', 'trend', 'melhorando', 'piorando', 'direcao'])) {
+                const chaves = Object.keys(saldosPorMes).sort();
+                if (chaves.length < 2) return 'Preciso de pelo menos 2 meses de dados para analisar tendencia.';
+                const ultimos = chaves.slice(-3);
+                const vals = ultimos.map(k => saldosPorMes[k]);
+                const crescente = vals[vals.length - 1] > vals[0];
+                return `Analisando os ultimos ${ultimos.length} meses: a tendencia esta <span class="${crescente ? 'chat-positivo' : 'chat-negativo'}">${crescente ? 'MELHORANDO 📈' : 'PIORANDO 📉'}</span>. Saldos: ${ultimos.map((k, i) => { const [a, m] = k.split('-'); return `${MESES[parseInt(m)-1]}: ${formatarMoeda(vals[i])}`; }).join(' → ')}.`;
+            }
+            
+            // 17. QUANTOS DIAS SEM GASTAR
+            if (match(p, ['dias sem gastar', 'jejum', 'sem despesa'])) {
+                const diasGasto = new Set(lancamentos.filter(l => l.tipo === 'saida').map(l => l.data));
+                const todosDias = new Set(lancamentos.map(l => l.data));
+                let semGasto = 0;
+                todosDias.forEach(d => { if (!diasGasto.has(d)) semGasto++; });
+                return `Voce passou <span class="chat-valor">${semGasto}</span> dia(s) sem registrar gastos, de um total de ${todosDias.size} dias com registros.`;
+            }
+            
+            // 18. RESUMO GERAL
+            if (match(p, ['resumo', 'resuma', 'overview', 'panorama', 'geral', 'como estou'])) {
+                const taxa = totalEntradasMes > 0 ? ((saldoMes / totalEntradasMes) * 100).toFixed(1) : 0;
+                return `<strong>Resumo de ${MESES[mesAtual]}:</strong><br>• Entradas: <span class="chat-positivo">${formatarMoeda(totalEntradasMes)}</span><br>• Saidas: <span class="chat-negativo">${formatarMoeda(totalSaidasMes)}</span><br>• Saldo: <span class="${saldoMes >= 0 ? 'chat-positivo' : 'chat-negativo'}">${formatarMoeda(saldoMes)}</span><br>• Taxa de poupanca: <span class="chat-valor">${taxa}%</span><br>• Media diaria: ${formatarMoeda(mediaDiariaMes)}<br>• Lancamentos: ${doMesAtual.length}<br>• Saldo acumulado total: <span class="${saldoGeral >= 0 ? 'chat-positivo' : 'chat-negativo'}">${formatarMoeda(saldoGeral)}</span>`;
+            }
+            
+            // 19. AJUDA
+            if (match(p, ['ajuda', 'help', 'o que voce sabe', 'comandos', 'perguntas'])) {
+                return `Posso responder sobre:<br>• <strong>Gastos</strong>: "Quanto gastei este mes?"<br>• <strong>Categorias</strong>: "Onde gasto mais?", "Gastos em alimentacao"<br>• <strong>Saldo</strong>: "Qual meu saldo?", "Saldo acumulado"<br>• <strong>Economia</strong>: "Quanto economizei?"<br>• <strong>Ranking</strong>: "Melhor mes", "Pior mes"<br>• <strong>Comparacao</strong>: "Compare janeiro com fevereiro"<br>• <strong>Tendencia</strong>: "Estou melhorando?"<br>• <strong>Resumo</strong>: "Me da um resumo"`;
+            }
+            
+            // 20. SAUDAÇÕES
+            if (match(p, ['oi', 'ola', 'hey', 'bom dia', 'boa tarde', 'boa noite', 'eai', 'e ai'])) {
+                return `Ola! 👋 Como posso ajudar com suas financas hoje? Me pergunte sobre gastos, saldo, categorias, economia ou qualquer duvida!`;
+            }
+            
+            // 21. AGRADECIMENTO
+            if (match(p, ['obrigado', 'valeu', 'thanks', 'legal', 'show', 'massa'])) {
+                return `Por nada! 😊 Estou aqui sempre que precisar. Continue cuidando bem das suas financas! 💪`;
+            }
+            
+            // FALLBACK
+            return `Nao entendi completamente. Tente perguntar de outra forma. Exemplos:<br>• "Quanto gastei este mes?"<br>• "Qual minha maior categoria?"<br>• "Quanto economizei?"<br>• "Me da um resumo"<br>• "Compare janeiro com fevereiro"<br><br>Digite <strong>"ajuda"</strong> para ver tudo que sei responder.`;
+        }
+
+        function match(texto, palavras) {
+            return palavras.some(p => texto.includes(p));
+        }
+
+        function encontrarCategoria(texto) {
+            const cats = Object.keys(CATEGORIA_CORES);
+            for (const cat of cats) {
+                const catNorm = cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                if (texto.includes(catNorm)) return cat;
+            }
+            const mapa = {
+                'comida': 'Alimentação', 'mercado': 'Alimentação', 'restaurante': 'Alimentação',
+                'uber': 'Transporte', 'gasolina': 'Transporte', 'onibus': 'Transporte',
+                'aluguel': 'Moradia', 'luz': 'Moradia', 'internet': 'Moradia',
+                'farmacia': 'Saúde', 'medico': 'Saúde', 'academia': 'Saúde',
+                'netflix': 'Lazer', 'cinema': 'Lazer', 'show': 'Lazer',
+                'roupa': 'Vestuário', 'sapato': 'Vestuário',
+                'livro': 'Educação', 'faculdade': 'Educação', 'curso': 'Educação',
+            };
+            for (const [chave, cat] of Object.entries(mapa)) {
+                if (texto.includes(chave)) return cat;
+            }
+            return null;
+        }
+
+        function extrairMeses(texto) {
+            const mesesEncontrados = [];
+            MESES.forEach((nome, idx) => {
+                const norm = nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                const abrev = norm.substring(0, 3);
+                if (texto.includes(norm) || texto.includes(abrev)) {
+                    mesesEncontrados.push(idx);
+                }
+            });
+            return [...new Set(mesesEncontrados)];
+        }
+
+        async function enviarPerguntaChat(textoOverride) {
+            const input = document.getElementById('chatInput');
+            const btn = document.getElementById('chatSendBtn');
+            const container = document.getElementById('chatMensagens');
+            
+            const pergunta = textoOverride || input.value.trim();
+            if (!pergunta) return;
+            
+            if (!textoOverride) input.value = '';
+            btn.disabled = true;
+            
+            const msgUser = document.createElement('div');
+            msgUser.className = 'chat-msg usuario';
+            msgUser.textContent = pergunta;
+            container.appendChild(msgUser);
+            
+            const typing = document.createElement('div');
+            typing.className = 'chat-typing';
+            typing.innerHTML = '<span></span><span></span><span></span>';
+            container.appendChild(typing);
+            container.scrollTop = container.scrollHeight;
+            
+            await new Promise(r => setTimeout(r, 400 + Math.random() * 600));
+            
+            const resposta = processarPergunta(pergunta);
+            
+            typing.remove();
+            
+            const msgIA = document.createElement('div');
+            msgIA.className = 'chat-msg ia';
+            msgIA.innerHTML = resposta;
+            container.appendChild(msgIA);
+            
+            container.scrollTop = container.scrollHeight;
+            
+            chatHistorico.push({ pergunta, resposta, data: Date.now() });
+            if (chatHistorico.length > 50) chatHistorico.shift();
+            
+            const countEl = document.getElementById('chatCount');
+            if (countEl) countEl.textContent = `${chatHistorico.length} pergunta(s) nesta sessao`;
+            
+            btn.disabled = false;
+            input.focus();
+        }
+
+
+
+        // ========== TELA DE BLOQUEIO ==========
+        let lockMode = 'unlock';
+        let pendingSetupStep = 0;
+        let tempNewPassword = '';
+
+        function toggleLockPwdVisibility() {
+            const input = document.getElementById('lockPassword');
+            input.type = input.type === 'password' ? 'text' : 'password';
+        }
+
+        let lockActionInProgress = false;
+
+        async function handleLockAction() {
+            if (lockActionInProgress) return;
+            lockActionInProgress = true;
+            
+            try {
+            const passwordInput = document.getElementById('lockPassword');
+            const btn = document.getElementById('lockBtn');
+            const errorEl = document.getElementById('lockError');
+            const password = passwordInput.value;
+            errorEl.textContent = '';
+            passwordInput.classList.remove('error');
+            btn.classList.add('loading');
+            btn.disabled = true;
+            try {
+                if (lockMode === 'unlock') {
+                    await storage.unlock(password);
+                    unlockUI();
+                } else if (lockMode === 'setup') {
+                    if (pendingSetupStep === 0) {
+                        if (password.length < 4) throw new Error('A senha deve ter pelo menos 4 caracteres.');
+                        tempNewPassword = password;
+                        pendingSetupStep = 1;
+                        document.getElementById('lockSubtitle').textContent = 'Confirme sua nova senha:';
+                        passwordInput.value = '';
+                        passwordInput.focus();
+                    } else {
+                        if (password !== tempNewPassword) throw new Error('As senhas não coincidem.');
+                        await storage.setPassword(tempNewPassword);
+                        tempNewPassword = '';
+                        pendingSetupStep = 0;
+                        showToast('🔒 Senha definida com sucesso!', 'success');
+                        updateLockButton();
+                        lockMode = 'unlock';
+                        document.getElementById('lockSubtitle').textContent = 'Digite sua senha para acessar seus dados financeiros.';
+                        document.getElementById('lockBtnText').textContent = 'Desbloquear';
+                        document.getElementById('lockOptions').style.display = 'none';
+                        closeLockScreen();
+                    }
+                } else if (lockMode === 'change') {
+                    if (pendingSetupStep === 0) {
+                        if (password.length < 4) throw new Error('A senha deve ter pelo menos 4 caracteres.');
+                        tempNewPassword = password;
+                        pendingSetupStep = 1;
+                        document.getElementById('lockSubtitle').textContent = 'Confirme sua nova senha:';
+                        passwordInput.value = '';
+                        passwordInput.focus();
+                    } else {
+                        if (password !== tempNewPassword) throw new Error('As senhas não coincidem.');
+                        await storage.setPassword(tempNewPassword);
+                        tempNewPassword = '';
+                        pendingSetupStep = 0;
+                        showToast('🔒 Senha alterada com sucesso!', 'success');
+                        lockMode = 'unlock';
+                        document.getElementById('lockSubtitle').textContent = 'Digite sua senha para acessar seus dados financeiros.';
+                        document.getElementById('lockBtnText').textContent = 'Desbloquear';
+                        closeLockScreen();
+                    }
+                }
+            } catch (e) {
+                errorEl.textContent = e.message;
+                passwordInput.classList.add('error');
+                setTimeout(() => passwordInput.classList.remove('error'), 500);
+            } finally {
+                btn.classList.remove('loading');
+                btn.disabled = false;
+            }
+            } finally {
+                lockActionInProgress = false;
+            }
+        }
+
+        function unlockUI() {
+            const lockScreen = document.getElementById('lockScreen');
+            const loading = document.getElementById('appLoading');
+            lockScreen.classList.add('hidden');
+            loading.classList.add('hidden');
+            loadAppData();
+        }
+
+        
+                async function loadAppData() {
+            // Mostrar skeleton nos cards
+            document.querySelectorAll('.card').forEach(c => c.classList.add('loading'));
+            
+            try {
+                const loadedLancamentos = await storage.load('lancamentos');
+        lancamentos = Array.isArray(loadedLancamentos) ? loadedLancamentos : [];
+
+        await loadOrdemCategorias();
+        await loadGamificacao();
+        preencherCategorias();
+        renderizarCategoriasDrag();
+
+        // Remover campo tags órfão dos lançamentos antigos
+        let dadosMudaram = false;
+        lancamentos = lancamentos.map(l => {
+            if (l.tags) {
+                const { tags, ...resto } = l;
+                dadosMudaram = true;
+                return resto;
+            }
+            return l;
+        });
+        if (dadosMudaram) await salvar();
+        await storage.delete('tags');
+        
+        // Carregar configurações
+        const tema = await storage._getConfig('tema');
+        if (tema) localStorage.setItem('tema', tema); // Compatibilidade
+        
+        const lembrete = await storage._getConfig('lembrete');
+        if (lembrete) localStorage.setItem('lembrete', lembrete);
+        
+        // Renderizar tudo
+        aplicarTemaSalvo();
+        preencherDataAtual();
+        atualizarBotaoLembrete();
+        if (lembreteAtivo()) agendarLembrete();
+        document.getElementById('data').valueAsDate = new Date();
+        preencherCategorias();
+        configurarEventos();
+        verificarAvisoBackup();
+        renderizar();
+        verificarConquistas();
+        registrarDiaHoje();
+        const novasConquistas = verificarConquistas();
+        renderizarGamificacao();
+        updateLockButton();
+        
+        // Remover skeleton após carregar
+                document.querySelectorAll('.card.loading').forEach(c => c.classList.remove('loading'));
+                
+                console.log(`[App] ${lancamentos.length} lançamentos carregados.`);
+    } catch (e) {
+        document.querySelectorAll('.card.loading').forEach(c => c.classList.remove('loading'));
+        console.error('Erro ao carregar dados:', e);
+        showToast('Erro ao carregar dados: ' + e.message, 'error');
+    }
+}
+
+        function showLockScreen(mode = 'unlock') {
+            const lockScreen = document.getElementById('lockScreen');
+            const subtitle = document.getElementById('lockSubtitle');
+            const btnText = document.getElementById('lockBtnText');
+            const options = document.getElementById('lockOptions');
+            const passwordInput = document.getElementById('lockPassword');
+            const errorEl = document.getElementById('lockError');
+            lockMode = mode;
+            pendingSetupStep = 0;
+            tempNewPassword = '';
+            passwordInput.value = '';
+            errorEl.textContent = '';
+            if (mode === 'unlock') {
+                subtitle.textContent = 'Digite sua senha para acessar seus dados financeiros.';
+                btnText.textContent = 'Desbloquear';
+                options.style.display = 'flex';
+            } else if (mode === 'setup') {
+                subtitle.textContent = 'Crie uma senha para proteger seus dados:';
+                btnText.textContent = 'Continuar';
+                options.style.display = 'none';
+            } else if (mode === 'change') {
+                subtitle.textContent = 'Digite sua nova senha:';
+                btnText.textContent = 'Continuar';
+                options.style.display = 'none';
+            }
+            lockScreen.classList.remove('hidden');
+            setTimeout(() => passwordInput.focus(), 300);
+        }
+
+        function closeLockScreen() {
+            document.getElementById('lockScreen').classList.add('hidden');
+        }
+
+        async function toggleLock() {
+            if (!storage.hasPassword) {
+                showLockScreen('setup');
+            } else {
+                showModal({
+                    title: '🔒 Segurança',
+                    customContent: `
+                        <p style="margin-bottom:15px;">Seus dados estão protegidos com senha.</p>
+                        <div style="display:flex;flex-direction:column;gap:8px;">
+                            <button class="modal-btn modal-btn-secondary" style="width:100%;text-align:left;" 
+                                    onclick="closeModal();showLockScreen('change')">🔄 Alterar senha</button>
+                            <button class="modal-btn modal-btn-secondary" style="width:100%;text-align:left;border-color:var(--red);color:var(--red);" 
+                                    onclick="closeModal();confirmRemovePassword()">🗑️ Remover senha</button>
+                            <button class="modal-btn modal-btn-secondary" style="width:100%;text-align:left;" 
+                                    onclick="closeModal();lockApp()">🔐 Bloquear agora</button>
+                        </div>
+                    `,
+                    confirmText: 'Fechar'
+                });
+            }
+        }
+
+                function lockApp() {
+    storage.isUnlocked = false;
+    storage.cryptoKey = null;
+    lancamentos = [];
+    
+    // Limpar UI
+    const tbody = document.getElementById('tabelaCorpo');
+    if (tbody) tbody.innerHTML = '';
+    
+    ['totalEntradas', 'totalSaidas', 'saldo', 'poupancaPotencial'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = 'R$ 0,00';
+    });
+    
+    ['varEntradas', 'varSaidas', 'varSaldo'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = '';
+    });
+    
+    showLockScreen('unlock');
+}
+
+        async function confirmRemovePassword() {
+            confirmModal(
+                'Tem certeza que deseja remover a proteção por senha?\n\nSeus dados ficarão desprotegidos neste dispositivo.',
+                async () => {
+                    try {
+                        await storage.removePassword();
+                        showToast('🔓 Senha removida.', 'warning');
+                        updateLockButton();
+                    } catch (e) {
+                        showToast('Erro ao remover senha: ' + e.message, 'error');
+                    }
+                },
+                { danger: true, confirmText: 'Remover Senha' }
+            );
+        }
+
+        async function resetPassword() {
+            confirmModal(
+                '⚠️ ATENÇÃO: Isso irá APAGAR TODOS os seus dados!\n\nEsta ação não pode ser desfeita.\n\nDeseja continuar?',
+                async () => {
+                    try {
+                        await storage.resetAll();
+                        localStorage.clear();
+                        location.reload();
+                    } catch (e) {
+                        showToast('Erro ao resetar: ' + e.message, 'error');
+                    }
+                },
+                { danger: true, confirmText: 'Apagar Tudo', title: '⚠️ Resetar Dados' }
+            );
+        }
+
+        function updateLockButton() {
+            const btn = document.getElementById('btnLock');
+            if (!btn) return;
+            if (storage.hasPassword) {
+                btn.innerHTML = '🔒';
+                btn.title = 'Opções de segurança';
+            } else {
+                btn.innerHTML = '🔓';
+                btn.title = 'Configurar senha';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const pwdInput = document.getElementById('lockPassword');
+            if (pwdInput) {
+                pwdInput.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        handleLockAction();
+                    }
+                });
+            }
+        });
+
+
         let mesAtual = new Date().getMonth();
         let anoAtual = new Date().getFullYear();
         let graficoPizza = null;
@@ -3124,27 +5469,94 @@
         };
 
         // ========== DRAG & DROP CATEGORIAS ==========
-        let ordemCategorias = JSON.parse(localStorage.getItem('ordemCategorias')) || Object.keys(CATEGORIA_CORES);
+        let ordemCategorias = Object.keys(CATEGORIA_CORES);
         let draggedItem = null;
 
-        function salvarOrdemCategorias() {
-            localStorage.setItem('ordemCategorias', JSON.stringify(ordemCategorias));
+        async function loadOrdemCategorias() {
+            try {
+                const loaded = await storage.load('ordemCategorias');
+                ordemCategorias = (Array.isArray(loaded) && loaded.length > 0)
+                    ? loaded
+                    : Object.keys(CATEGORIA_CORES);
+            } catch (e) {
+                ordemCategorias = Object.keys(CATEGORIA_CORES);
+            }
+            // Garantir que todas as categorias padrão existam na ordem
+            Object.keys(CATEGORIA_CORES).forEach(cat => {
+                if (!ordemCategorias.includes(cat)) ordemCategorias.push(cat);
+            });
+        }
+        async function loadGamificacao() {
+            try {
+                const data = await storage.load('gamificacao');
+                if (data) {
+                    // Carregar dados de gamificação se existirem
+                    // Por enquanto, apenas log
+                    console.log('[Gamificação] Dados carregados:', data);
+                }
+            } catch (e) {
+                console.warn('Erro ao carregar gamificação:', e);
+            }
         }
 
-        function renderizarCategoriasDrag() {
-            const container = document.getElementById('categoriasDragList');
-            if (!container) return;
-
-            Object.keys(CATEGORIA_CORES).forEach(cat => {
-                if (!ordemCategorias.includes(cat)) {
-                    ordemCategorias.push(cat);
+        function verificarConquistas() {
+            try {
+                // Verificar conquistas baseadas nos dados atuais
+                // Placeholder - será expandido conforme regras de gamificação
+                const totalLanc = lancamentos.length;
+                if (totalLanc > 0) console.log(`[Gamificação] Verificando ${totalLanc} lançamentos`);
+            } catch (e) {
+                console.warn('Erro ao verificar conquistas:', e);
+            }
+        }
+        function registrarDiaHoje() {
+            try {
+                const hoje = new Date().toISOString().split('T')[0];
+                const streak = JSON.parse(localStorage.getItem('streak') || '{"ultimoDia": null, "dias": 0}');
+                if (streak.ultimoDia !== hoje) {
+                    streak.ultimoDia = hoje;
+                    streak.dias = (streak.dias || 0) + 1;
+                    localStorage.setItem('streak', JSON.stringify(streak));
                 }
-            });
+                console.log('[Gamificação] Dia registrado:', hoje);
+            } catch (e) {
+                console.warn('Erro ao registrar dia:', e);
+            }
+        }
+
+        function renderizarGamificacao() {
+            try {
+                const container = document.getElementById('gamificacaoContainer');
+                if (!container) return;
+                // Placeholder para renderização de gamificação
+                // Será expandido com conquistas, níveis, etc.
+                container.innerHTML = '<div style="text-align:center;color:var(--text-muted);padding:20px;">🏆 Gamificação carregada</div>';
+            } catch (e) {
+                console.warn('Erro ao renderizar gamificação:', e);
+            }
+        }
+
+
+
+
+
+
+        async function salvarOrdemCategorias() {
+            try {
+                await storage.save('ordemCategorias', ordemCategorias);
+            } catch (e) {
+                console.error('Erro ao salvar ordem:', e);
+            }
+        }
+
+                function renderizarCategoriasDrag() {
+            const container = document.getElementById('categoriasDragList');
+            if (!container || !Array.isArray(ordemCategorias)) return;
 
             container.innerHTML = ordemCategorias.map((cat, index) => {
                 const cor = CATEGORIA_CORES[cat] || '#78909c';
                 return `
-                    <div class="categoria-drag-item" draggable="true" data-categoria="${cat}" data-index="${index}">
+                    <div class="categoria-drag-item" draggable="true" data-categoria="${escapeHtml(cat)}" data-index="${index}">
                         <span class="drag-handle">⋮⋮</span>
                         <div class="categoria-drag-cor" style="background:${cor}"></div>
                         <span class="categoria-drag-nome">${escapeHtml(cat)}</span>
@@ -3258,6 +5670,9 @@
 
         // Função principal que coordena todas as análises
         function gerarInsights() {
+            if (!storage.isUnlocked || lancamentos.length === 0) {
+                return { insuficiente: true, mensagem: 'Desbloqueie para ver análises.' };
+            }
             const inicio = Date.now();
             const doMes = filtrarMes();
             const lancamentosHistorico = lancamentos; // todos os lançamentos
@@ -3952,32 +6367,58 @@
             }
         }
 
-        function init() {
-            // Migração: remover campo 'conta' antigo
-            if (lancamentos.some(l => 'conta' in l)) {
-                lancamentos = lancamentos.map(l => { const { conta, ...resto } = l; return resto; });
-                salvar();
-            }
-            // Limpar localStorage de funcionalidades removidas
+                async function init() {
+            // Migração: remover campo 'conta' antigo (se existir)
+            try { const _ls = localStorage.getItem('lancamentos'); if (_ls && _ls.includes('"conta"')) { let _tmp = JSON.parse(_ls); if (Array.isArray(_tmp) && _tmp.some(l => 'conta' in l)) { _tmp = _tmp.map(l => { const { conta, ...r } = l; return r; }); localStorage.setItem('lancamentos', JSON.stringify(_tmp)); } } } catch(e) {}
             localStorage.removeItem('recorrentes');
             localStorage.removeItem('ultimoProcessamentoRecorrentes');
             localStorage.removeItem('metas');
             localStorage.removeItem('contaAtiva');
-            aplicarTemaSalvo();
-            preencherDataAtual();
-            atualizarBotaoLembrete();
-            if (lembreteAtivo()) agendarLembrete();
-            document.getElementById('data').valueAsDate = new Date();
-            preencherCategorias();
-            renderizarCategoriasDrag();
-            configurarEventos();
-            verificarAvisoBackup();
-            renderizar();
-            renderizarIA();
-            verificarAlertasIA();
+    const loading = document.getElementById('appLoading');
+    const lockScreen = document.getElementById('lockScreen');
+    
+    try {
+        // Inicializar IndexedDB
+        await storage.init();
+        
+        // Verificar se tem senha
+        const hasPwd = await storage.checkPasswordExists();
+        
+        if (hasPwd) {
+            // Mostrar tela de bloqueio
+            loading.classList.add('hidden');
+            showLockScreen('unlock');
+        } else {
+            // Sem senha: carregar diretamente
+            storage.isUnlocked = true;
+            
+            // Migrar do localStorage se necessário
+            const existingData = localStorage.getItem('lancamentos');
+            if (existingData) {
+                await storage._migrateFromLocalStorage();
+            }
+            
+            loading.classList.add('hidden');
+            await loadAppData();
         }
+        
+        updateLockButton();
+        
+    } catch (e) {
+        console.error('Erro na inicialização:', e);
+        loading.innerHTML = `
+            <div style="text-align:center;color:var(--red);">
+                <p>Erro ao inicializar o app.</p>
+                <p style="font-size:0.8rem;margin-top:8px;">${e.message}</p>
+                <button onclick="location.reload()" style="margin-top:16px;padding:8px 16px;border:1px solid var(--red);background:transparent;color:var(--red);border-radius:8px;cursor:pointer;">Tentar novamente</button>
+            </div>
+        `;
+    }
+}
 
         function configurarEventos() {
+            if (eventosConfigurados) return;
+            eventosConfigurados = true;
             const valorInput = document.getElementById('valor');
             valorInput.addEventListener('input', function() {
                 let v = this.value.replace(/[^\d,]/g, '').replace(/(,.*),/g, '$1');
@@ -4104,6 +6545,130 @@
                 function formatarMoeda(valor) {
             return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         }
+        // ========== ANIMAÇÃO DE CONTAGEM ==========
+        const activeAnimations = new Map();
+
+        function animarValor(elementId, valorFinal, duracao = 600) {
+            const el = document.getElementById(elementId);
+            if (!el) return;
+            
+            // Cancelar animação anterior neste elemento
+            if (activeAnimations.has(elementId)) {
+                cancelAnimationFrame(activeAnimations.get(elementId));
+            }
+            
+            // Verificar reduced motion
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReduced) {
+                el.textContent = formatarMoeda(valorFinal);
+                return;
+            }
+            
+            // Pegar valor atual do elemento
+            const textoAtual = el.textContent.replace(/[^\d.,-]/g, '').replace(/\./g, '').replace(',', '.');
+            let valorInicial = parseFloat(textoAtual) || 0;
+            
+            // Se a diferença for muito grande, começar do zero
+            if (Math.abs(valorFinal - valorInicial) > Math.abs(valorFinal) * 5) {
+                valorInicial = 0;
+            }
+            
+            const inicio = performance.now();
+            
+            function step(timestamp) {
+                const progress = Math.min((timestamp - inicio) / duracao, 1);
+                
+                // Easing ease-out-expo
+                const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+                
+                const valorAtual = valorInicial + (valorFinal - valorInicial) * eased;
+                el.textContent = formatarMoeda(valorAtual);
+                
+                if (progress < 1) {
+                    activeAnimations.set(elementId, requestAnimationFrame(step));
+                } else {
+                    el.textContent = formatarMoeda(valorFinal);
+                    activeAnimations.delete(elementId);
+                }
+            }
+            
+            activeAnimations.set(elementId, requestAnimationFrame(step));
+        }
+
+        // ========== RIPPLE EFFECT ==========
+        function criarRipple(event) {
+            const button = event.currentTarget;
+            const rect = button.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = event.clientX - rect.left - size / 2;
+            const y = event.clientY - rect.top - size / 2;
+            
+            const ripple = document.createElement('span');
+            ripple.className = 'ripple';
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            
+            // Remover ripples antigos
+            const oldRipple = button.querySelector('.ripple');
+            if (oldRipple) oldRipple.remove();
+            
+            button.appendChild(ripple);
+            
+            ripple.addEventListener('animationend', () => ripple.remove());
+        }
+
+        function aplicarRipple() {
+            const botoes = document.querySelectorAll(
+                '.btn-add, .btn-nav, .btn-export, .btn-import, ' +
+                '.btn-excel, .btn-pdf, .btn-print, .modal-btn-primary, ' +
+                '.modal-btn-danger, .lock-btn, .btn-hoje, .btn-ano'
+            );
+            botoes.forEach(btn => {
+                btn.removeEventListener('click', criarRipple);
+                btn.addEventListener('click', criarRipple);
+            });
+        }
+
+        // ========== TRANSIÇÃO SUAVE DE MÊS ==========
+        let isTransitioning = false;
+
+        async function mudarMesComTransicao(delta) {
+            if (isTransitioning) return;
+            isTransitioning = true;
+            
+            const container = document.querySelector('.container');
+            
+            // Fase 1: fade out
+            container.classList.add('month-transitioning');
+            
+            await new Promise(r => setTimeout(r, 150));
+            
+            // Fase 2: mudar dados
+            cancelarEdicao();
+            limparFiltros();
+            mesAtual += delta;
+            if (mesAtual > 11) { mesAtual = 0; anoAtual++; }
+            if (mesAtual < 0) { mesAtual = 11; anoAtual--; }
+            
+            const hoje = new Date();
+            const diaParaUsar = (anoAtual === hoje.getFullYear() && mesAtual === hoje.getMonth())
+                ? hoje.getDate() : 1;
+            document.getElementById('data').value =
+                `${anoAtual}-${String(mesAtual + 1).padStart(2, '0')}-${String(diaParaUsar).padStart(2, '0')}`;
+            
+            renderizar();
+            
+            // Fase 3: fade in
+            container.classList.remove('month-transitioning');
+            container.classList.add('month-entering');
+            
+            await new Promise(r => setTimeout(r, 400));
+            container.classList.remove('month-entering');
+            
+            isTransitioning = false;
+        }
+
 
         function escapeHtml(str) {
             return String(str).replace(/[&<>"']/g, function(c) {
@@ -4120,14 +6685,18 @@
 
         function novoId() {
             if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
-            return Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
+            // Fallback mais robusto
+            return Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 10) + '-' + Math.random().toString(36).slice(2, 6);
         }
 
         function preencherCategorias() {
-            const cats = ordemCategorias.filter(c => CATEGORIA_CORES[c]);
-            const html = cats.map(c => `<option value="${c}">${escapeHtml(c)}</option>`).join('');
-            document.getElementById('categoria').innerHTML = html;
-            document.getElementById('categoria').value = 'Alimentação';
+            const sel = document.getElementById('categoria');
+            if (!sel) return;
+            const cats = (Array.isArray(ordemCategorias) && ordemCategorias.length > 0)
+                ? ordemCategorias.filter(c => CATEGORIA_CORES[c])
+                : Object.keys(CATEGORIA_CORES);
+            sel.innerHTML = cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+            if (!cats.includes(sel.value)) sel.value = 'Alimentação';
         }
 
         function getTotaisMes(ano, mes) {
@@ -4150,8 +6719,9 @@
             return `<span class="variacao ${cls}">${sinal}${formatarMoeda(Math.abs(dif))} (${sinal}${pct.toFixed(1)}%) vs ${rotulo}</span>`;
         }
 
-        function preencherFiltroCategoria() {
+                function preencherFiltroCategoria() {
             const sel = document.getElementById('filtroCategoria');
+            if (!sel) return;
             const atual = sel.value;
             const cats = new Set([
                 ...Object.keys(CATEGORIA_CORES),
@@ -4195,11 +6765,11 @@
             });
         }
 
-        function desfazerExclusao() {
+        async function desfazerExclusao() {
             const l = lixeira.pop();
             if (!l) return;
             lancamentos.push(l);
-            salvar();
+            await salvar();
             renderizar();
         }
 
@@ -4210,11 +6780,11 @@
         // Alias para compatibilidade com chamadas antigas
         function guardarBackupImportacao() { return guardarBackupImport(); }
 
-        function desfazerImportacao() {
+        async function desfazerImportacao() {
             const snap = historicoImport.pop();
             if (!snap) return;
             lancamentos = snap.lancamentos;
-            salvar();
+            await salvar();
             renderizar();
             showToast('Importação desfeita. Dados restaurados.', 'success');
         }
@@ -4231,12 +6801,12 @@
             if (aviso) aviso.style.display = 'none';
         }
 
-        function verificarAvisoBackup() {
+        async function verificarAvisoBackup() {
             const aviso = document.getElementById('avisoBackup');
             const texto = document.getElementById('avisoBackupTexto');
             if (!aviso || !texto) return;
-            const ultimo = localStorage.getItem('ultimoBackup');
-            const dispensado = localStorage.getItem('backupDispensado');
+            const ultimo = await storage._getConfig('ultimoBackup');
+            const dispensado = await storage._getConfig('backupDispensado');
             const inicioHoje = new Date(); inicioHoje.setHours(0, 0, 0, 0);
             const dispensadoDia = dispensado ? new Date(dispensado).setHours(0, 0, 0, 0) : null;
             const podeMostrar = !dispensadoDia || dispensadoDia < inicioHoje.getTime();
@@ -4296,7 +6866,7 @@
             renderizar();
         }
 
-        function adicionarLancamento() {
+        async function adicionarLancamento() {
             const descricao = document.getElementById('descricao').value.trim();
             const valor = parseValorTexto(document.getElementById('valor').value);
             const tipo = document.getElementById('tipo').value;
@@ -4319,7 +6889,7 @@
             } else {
                 lancamentos.push({ id: novoId(), descricao, valor, tipo, data, categoria });
             }
-            salvar();
+            await salvar();
             const chaveAlvo = chaveFinanceira(data);
             if (chaveAlvo) {
                 const anoN = parseInt(chaveAlvo.substring(0, 4), 10);
@@ -4346,24 +6916,35 @@ editandoId = id;
             document.getElementById('descricao').focus();
         }
 
-        function excluirLancamento(id) {
+                async function excluirLancamento(id) {
             const l = lancamentos.find(l => l.id === id);
             if (!l) return;
+            
             confirmModal(
-                `Excluir o lançamento "${l.descricao}" (${formatarMoeda(l.valor)})?`,
-                () => {
+                `Excluir "${l.descricao}" (${formatarMoeda(l.valor)})?`,
+                async () => {
+                    // Animar remoção da linha
+                    const rows = document.querySelectorAll('#tabelaCorpo tr');
+                    const row = [...rows].find(r =>
+                        r.querySelector(`button[onclick*="${id}"]`)
+                    );
+                    
+                    if (row) {
+                        row.classList.add('removing');
+                        await new Promise(r => setTimeout(r, 300));
+                    }
+                    
                     lancamentos = lancamentos.filter(item => item.id !== id);
                     lixeira.push(l);
                     if (lixeira.length > 10) lixeira.shift();
-                    salvar();
+                    await salvar();
                     renderizar();
-                    showToast('Lançamento excluído. Ctrl+Z para desfazer.', 'warning');
+                    showToast('Excluído. Ctrl+Z para desfazer.', 'warning');
                 },
-                { title: 'Excluir lançamento', danger: true, confirmText: 'Excluir', cancelText: 'Cancelar' }
+                { danger: true, confirmText: 'Excluir' }
             );
         }
-
-        function limparMes() {
+        async function limparMes() {
             const chave = getChaveMes(anoAtual, mesAtual);
             const nomeMes = MESES[mesAtual] + ' ' + anoAtual;
             const doMes = filtrarMes();
@@ -4373,9 +6954,9 @@ editandoId = id;
             }
             confirmModal(
                 `Limpar TODOS os ${doMes.length} lançamentos de ${nomeMes}?\n\nEsta ação não pode ser desfeita diretamente.`,
-                () => {
+                async () => {
                     lancamentos = lancamentos.filter(l => chaveFinanceira(l.data) !== chave);
-                    salvar();
+                    await salvar();
                     renderizar();
                     showToast(`Lançamentos de ${nomeMes} removidos.`, 'warning');
                 },
@@ -4383,7 +6964,17 @@ editandoId = id;
             );
         }
 
-        function salvar() { localStorage.setItem('lancamentos', JSON.stringify(lancamentos)); cacheInsights = null; ultimoCalculoIA = null; }
+        async function salvar() {
+            try {
+                await storage.save('lancamentos', lancamentos);
+                // Invalidar cache de IA
+                cacheInsights = null;
+                ultimoCalculoIA = null;
+            } catch (e) {
+                console.error('Erro ao salvar:', e);
+                showToast('Erro ao salvar dados.', 'error');
+            }
+        }
 
                 function renderizar() {
             const nomeMes = MESES[mesAtual] + ' ' + anoAtual;
@@ -4454,7 +7045,7 @@ editandoId = id;
             const gastoEstimadoRestante = mediaDiariaSaidas * diasRestantes;
             const poupancaEstimada = Math.max(0, saldoMes - gastoEstimadoRestante);
 
-            document.getElementById('poupancaPotencial').textContent = formatarMoeda(poupancaEstimada);
+            animarValor('poupancaPotencial', poupancaEstimada);
             document.getElementById('poupancaDetalhes').innerHTML = `
                 Saldo atual: ${formatarMoeda(saldoMes)} | 
                 Média diária de gastos: ${formatarMoeda(mediaDiariaSaidas)} | 
@@ -4810,27 +7401,42 @@ editandoId = id;
             `;
         }
 
-        function exportarDados() {
-            marcarBackupFeito();
-            const dados = JSON.stringify(lancamentos, null, 2);
-            const hoje = new Date();
-            const ano = hoje.getFullYear();
-            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
-            const dia = String(hoje.getDate()).padStart(2, '0');
-            const nome = `backup-financeiro-${ano}-${mes}-${dia}.json`;
-            const blob = new Blob([dados], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = nome;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-            showToast(`Dados exportados como "${nome}"`, 'success');
+        async function exportarDados() {
+            if (!storage.isUnlocked) {
+                showToast('Desbloqueie o app antes de exportar.', 'error');
+                return;
+            }
+            
+            const btn = event?.target?.closest?.('.btn-export');
+            if (btn) btn.classList.add('btn-loading');
+            
+            try {
+                marcarBackupFeito();
+                const exportData = await storage.exportAll();
+                const json = JSON.stringify(exportData, null, 2);
+                
+                const hoje = new Date();
+                const nome = `backup-financeiro-${hoje.getFullYear()}-${String(hoje.getMonth()+1).padStart(2,'0')}-${String(hoje.getDate()).padStart(2,'0')}.json`;
+                
+                const blob = new Blob([json], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = nome;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                
+                showToast(`Dados exportados como "${nome}"`, 'success');
+            } catch (e) {
+                showToast('Erro ao exportar: ' + e.message, 'error');
+            } finally {
+                if (btn) btn.classList.remove('btn-loading');
+            }
         }
 
-        function exportarExcel() {
+                function exportarExcel() {
             marcarBackupFeito();
             const linhas = [['Data', 'Tipo', 'Descricao', 'Valor', 'Categoria']];
             lancamentos.slice().sort((a, b) => a.data.localeCompare(b.data)).forEach(l => {
@@ -4850,7 +7456,11 @@ editandoId = id;
             showToast('Dados exportados como "' + nome + '"', 'success');
         }
 
-        function exportarPDF() {
+        async function exportarPDF() {
+            if (!storage.isUnlocked) {
+                showToast('Desbloqueie o app antes de exportar.', 'error');
+                return;
+            }
             if (typeof window.jspdf === 'undefined') {
                 showToast('Biblioteca de PDF ainda carregando. Tente novamente.', 'error');
                 return;
@@ -5042,18 +7652,18 @@ editandoId = id;
                             message: `Encontrados ${todosLancamentos.length} lançamentos.\n\nComo deseja importar?`,
                             confirmText: '➕ Adicionar aos existentes',
                             cancelText: '🔄 Substituir tudo',
-                            onConfirm: () => {
+                            onConfirm: async () => {
                                 const ids = new Set(lancamentos.map(l => l.id));
                                 const novos = todosLancamentos.filter(l => !ids.has(l.id));
                                 lancamentos = lancamentos.concat(novos);
-                                salvar();
+                                await salvar();
                                 renderizar();
                                 showToast(novos.length + ' novos lançamentos adicionados.', 'success');
                             },
-                            onCancel: () => {
+                            onCancel: async () => {
                                 guardarBackupImportacao();
                                 lancamentos = todosLancamentos;
-                                salvar();
+                                await salvar();
                                 renderizar();
                                 showToast('Dados substituídos! Use "Desfazer Importação" se precisar.', 'warning');
                             }
@@ -5064,32 +7674,56 @@ editandoId = id;
                 };
                 leitor.readAsArrayBuffer(arquivo);
             } else {
-                leitor.onload = function(e) {
+                leitor.onload = async function(e) {
                     try {
-                        const dados = JSON.parse(e.target.result);
-                        if (!Array.isArray(dados)) throw new Error('Formato inválido');
+                        const importData = JSON.parse(e.target.result);
 
-                        showModal({
+                        // Verificar se é formato novo (v2) ou antigo
+                        if (importData.version === 2 && importData.data) {
+                            // Formato novo
+                            showModal({
+                                title: 'Importar Dados',
+                                message: `Encontrados dados no formato seguro.\n\nComo deseja importar?`,
+                                confirmText: '➕ Adicionar',
+                                cancelText: '🔄 Substituir',
+                                onConfirm: async () => {
+                                    await storage.importAll(importData, true);
+                                    await loadAppData();
+                                    showToast('Dados importados com sucesso!', 'success');
+                                },
+                                onCancel: async () => {
+                                    guardarBackupImportacao();
+                                    await storage.importAll(importData, false);
+                                    await loadAppData();
+                                    showToast('Dados substituídos!', 'warning');
+                                }
+                            });
+                        } else if (Array.isArray(importData)) {
+                            let dados = importData;
+                            showModal({
                             title: '📁 Importar Dados JSON',
                             message: `Encontrados ${dados.length} lançamentos.\n\nComo deseja importar?`,
                             confirmText: '➕ Adicionar aos existentes',
                             cancelText: '🔄 Substituir tudo',
-                            onConfirm: () => {
+                            onConfirm: async () => {
                                 const ids = new Set(lancamentos.map(l => l.id));
                                 const novos = dados.filter(l => !ids.has(l.id));
                                 lancamentos = lancamentos.concat(novos);
-                                salvar();
+                                await salvar();
                                 renderizar();
                                 showToast(novos.length + ' novos lançamentos adicionados.', 'success');
                             },
-                            onCancel: () => {
+                            onCancel: async () => {
                                 guardarBackupImportacao();
                                 lancamentos = dados;
-                                salvar();
+                                await salvar();
                                 renderizar();
                                 showToast('Dados substituídos! Use "Desfazer Importação" se precisar.', 'warning');
                             }
                         });
+                        } else {
+                            throw new Error('Formato inválido');
+                        }
                     } catch (err) {
                         showToast('Arquivo inválido! Use um .json ou .xlsx válido.', 'error');
                     }
@@ -5108,15 +7742,45 @@ editandoId = id;
         }, 500);
 
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./sw.js');
+            navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('[PWA] SW registrado:', reg.scope))
+                .catch(err => console.warn('[PWA] SW falhou:', err));
             navigator.serviceWorker.addEventListener('message', function(e) {
                 if (e.data && e.data.tipo === 'notificacao-ok') {
                     showToast('Notificação enviada.', 'success');
                 }
             });
         }
+
+        // Aplicar ripple aos botões
+        aplicarRipple();
+
+        // Re-aplicar ripple após renders dinâmicos
+        const observer = new MutationObserver(() => aplicarRipple());
+        observer.observe(document.body, { childList: true, subtree: true });
     </script>
-    <footer class="rodape">Painel Financeiro &bull; v5.1 &bull; Dados salvos localmente neste dispositivo</footer>
+    
+        <!-- Chat IA -->
+        <div class="chat-area animar" id="chatArea">
+            <h2>💬 Chat Financeiro</h2>
+            <p class="chat-sub">Pergunte sobre seus gastos, saldo, categorias e tendências. Ex: "Quanto gastei este mês?"</p>
+            <div class="chat-sugestoes" id="chatSugestoes">
+                <div class="chat-sugestao" onclick="enviarPerguntaChat('Quanto gastei este mês?')">Quanto gastei?</div>
+                <div class="chat-sugestao" onclick="enviarPerguntaChat('Qual minha maior categoria?')">Maior categoria</div>
+                <div class="chat-sugestao" onclick="enviarPerguntaChat('Me dá um resumo')">Resumo</div>
+                <div class="chat-sugestao" onclick="enviarPerguntaChat('Quanto economizei?')">Economia</div>
+            </div>
+            <div class="chat-mensagens" id="chatMensagens">
+                <div class="chat-msg ia">Olá! 👋 Sou seu assistente financeiro. Pergunte sobre seus lançamentos!</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" class="chat-input" placeholder="Digite sua pergunta..." autocomplete="off">
+                <button id="chatSendBtn" class="chat-send-btn" onclick="enviarPerguntaChat()">Enviar</button>
+            </div>
+            <div class="chat-count" id="chatCount">0 pergunta(s) nesta sessão</div>
+        </div>
+
+        <footer class="rodape">Painel Financeiro &bull; v6.1 &bull; Dados criptografados e salvos neste dispositivo</footer>
 
     <!-- Modal Overlay (sistema de modais) -->
     <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this) closeModal()">
